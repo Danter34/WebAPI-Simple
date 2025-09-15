@@ -3,15 +3,47 @@
   "WorkspaceRootPath": "E:\\LTWEB2\\Thuchanh\\WebAPI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Migrations\\20250915080136_InitialDatabaseMigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WebAPI\\Migrations\\20250915080136_InitialDatabaseMigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|e:\\ltweb2\\thuchanh\\webapi\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|e:\\ltweb2\\thuchanh\\webapi\\webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|e:\\ltweb2\\thuchanh\\webapi\\webapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|e:\\ltweb2\\thuchanh\\webapi\\webapi\\models\\domain\\book_authors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\models\\domain\\book_authors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|e:\\ltweb2\\thuchanh\\webapi\\webapi\\models\\domain\\publishers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\models\\domain\\publishers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|e:\\ltweb2\\thuchanh\\webapi\\webapi\\models\\domain\\books.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\models\\domain\\books.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|e:\\ltweb2\\thuchanh\\webapi\\webapi\\models\\domain\\authors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\models\\domain\\authors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|e:\\ltweb2\\thuchanh\\webapi\\webapi\\controllers\\valuescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\valuescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|e:\\ltweb2\\thuchanh\\webapi\\webapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|E:\\LTWEB2\\Thuchanh\\WebAPI\\webapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|e:\\ltweb2\\thuchanh\\webapi\\webapi\\webapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|E:\\LTWEB2\\Thuchanh\\WebAPI\\webapi\\webapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\webapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
@@ -31,19 +63,123 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "20250915080136_InitialDatabaseMigration.cs",
+              "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Migrations\\20250915080136_InitialDatabaseMigration.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Migrations\\20250915080136_InitialDatabaseMigration.cs",
+              "ToolTip": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Migrations\\20250915080136_InitialDatabaseMigration.cs",
+              "RelativeToolTip": "WebAPI\\Migrations\\20250915080136_InitialDatabaseMigration.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-15T08:01:37.183Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Program.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Program.cs",
+              "ToolTip": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Program.cs",
+              "RelativeToolTip": "WebAPI\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-15T07:57:58.07Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "WebAPI\\appsettings.json",
+              "ToolTip": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\appsettings.json",
+              "RelativeToolTip": "WebAPI\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-15T07:55:43.887Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Data\\AppDbContext.cs",
+              "ToolTip": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "WebAPI\\Data\\AppDbContext.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAxwB0AAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-15T07:49:36.122Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Book_Authors.cs",
+              "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Models\\Domain\\Book_Authors.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Models\\Domain\\Book_Authors.cs",
+              "ToolTip": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Models\\Domain\\Book_Authors.cs",
+              "RelativeToolTip": "WebAPI\\Models\\Domain\\Book_Authors.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-15T07:37:24.885Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Authors.cs",
+              "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Models\\Domain\\Authors.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Models\\Domain\\Authors.cs",
+              "ToolTip": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Models\\Domain\\Authors.cs",
+              "RelativeToolTip": "WebAPI\\Models\\Domain\\Authors.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-15T07:34:44.141Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Publishers.cs",
+              "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Models\\Domain\\Publishers.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Models\\Domain\\Publishers.cs",
+              "ToolTip": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Models\\Domain\\Publishers.cs",
+              "RelativeToolTip": "WebAPI\\Models\\Domain\\Publishers.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-15T07:32:16.757Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Books.cs",
+              "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Models\\Domain\\Books.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Models\\Domain\\Books.cs",
+              "ToolTip": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Models\\Domain\\Books.cs",
+              "RelativeToolTip": "WebAPI\\Models\\Domain\\Books.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABEAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-15T07:22:43.623Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "ValuesController.cs",
               "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Controllers\\ValuesController.cs",
               "RelativeDocumentMoniker": "WebAPI\\Controllers\\ValuesController.cs",
               "ToolTip": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Controllers\\ValuesController.cs",
               "RelativeToolTip": "WebAPI\\Controllers\\ValuesController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-15T07:13:40.186Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 9,
               "Title": "WeatherForecastController.cs",
               "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Controllers\\WeatherForecastController.cs",
               "RelativeDocumentMoniker": "WebAPI\\Controllers\\WeatherForecastController.cs",
@@ -56,8 +192,8 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "WebAPI",
+              "DocumentIndex": 10,
+              "Title": "WebAPI.csproj",
               "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\WebAPI.csproj",
               "RelativeDocumentMoniker": "WebAPI\\WebAPI.csproj",
               "ToolTip": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\WebAPI.csproj",
