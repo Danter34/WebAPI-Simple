@@ -4,7 +4,7 @@ using WebAPI.Models.DTO;
 
 namespace WebAPI.Repositories
 {
-    public class SQLBookRepository:IBookRepository
+    public class SQLBookRepository : IBookRepository
     {
         private readonly AppDbContext _dbContext;
         public SQLBookRepository(AppDbContext dbContext)
@@ -52,7 +52,24 @@ namespace WebAPI.Repositories
 
         public AddBookRequestDTO AddBook(AddBookRequestDTO addBookRequestDTO)
         {
-            //map DTO to Domain Model 
+            // Check Publisher tồn tại
+            var publisherExists = _dbContext.Publishers.Any(p => p.Id == addBookRequestDTO.PublisherID);
+            if (!publisherExists)
+            {
+                throw new Exception($"Publisher with ID {addBookRequestDTO.PublisherID} does not exist.");
+            }
+
+            // Check Author tồn tại
+            foreach (var authorId in addBookRequestDTO.AuthorIds)
+            {
+                var authorExists = _dbContext.Authors.Any(a => a.Id == authorId);
+                if (!authorExists)
+                {
+                    throw new Exception($"Author with ID {authorId} does not exist.");
+                }
+            }
+
+            // Map DTO → Domain
             var bookDomainModel = new Books
             {
                 Title = addBookRequestDTO.Title,
@@ -65,7 +82,7 @@ namespace WebAPI.Repositories
                 DateAdded = addBookRequestDTO.DateAdded,
                 PublisherID = addBookRequestDTO.PublisherID
             };
-            //Use Domain Model to add Book 
+
             _dbContext.Books.Add(bookDomainModel);
             _dbContext.SaveChanges();
 
@@ -77,45 +94,66 @@ namespace WebAPI.Repositories
                     AuthorId = id
                 };
                 _dbContext.Books_Authors.Add(_book_author);
-                _dbContext.SaveChanges();
             }
+            _dbContext.SaveChanges();
+
             return addBookRequestDTO;
         }
 
         public AddBookRequestDTO? UpdateBookById(int id, AddBookRequestDTO bookDTO)
         {
             var bookDomain = _dbContext.Books.FirstOrDefault(n => n.Id == id);
-            if (bookDomain != null)
+            if (bookDomain == null)
             {
-                bookDomain.Title = bookDTO.Title;
-                bookDomain.Description = bookDTO.Description;
-                bookDomain.IsRead = bookDTO.IsRead;
-                bookDomain.DateRead = bookDTO.DateRead;
-                bookDomain.Rate = bookDTO.Rate;
-                bookDomain.Genre = bookDTO.Genre;
-                bookDomain.CoverUrl = bookDTO.CoverUrl;
-                bookDomain.DateAdded = bookDTO.DateAdded;
-                bookDomain.PublisherID = bookDTO.PublisherID;
-                _dbContext.SaveChanges();
+                throw new Exception($"Book with ID {id} does not exist.");
             }
 
-            var authorDomain = _dbContext.Books_Authors.Where(a => a.BookId == id).ToList();
-            if (authorDomain != null)
+            // Check Publisher tồn tại
+            var publisherExists = _dbContext.Publishers.Any(p => p.Id == bookDTO.PublisherID);
+            if (!publisherExists)
             {
-                _dbContext.Books_Authors.RemoveRange(authorDomain);
-                _dbContext.SaveChanges();
+                throw new Exception($"Publisher with ID {bookDTO.PublisherID} does not exist.");
             }
-            foreach (var authorid in bookDTO.AuthorIds)
+
+            // Check Author tồn tại
+            foreach (var authorId in bookDTO.AuthorIds)
+            {
+                var authorExists = _dbContext.Authors.Any(a => a.Id == authorId);
+                if (!authorExists)
+                {
+                    throw new Exception($"Author with ID {authorId} does not exist.");
+                }
+            }
+
+            // Update Book
+            bookDomain.Title = bookDTO.Title;
+            bookDomain.Description = bookDTO.Description;
+            bookDomain.IsRead = bookDTO.IsRead;
+            bookDomain.DateRead = bookDTO.DateRead;
+            bookDomain.Rate = bookDTO.Rate;
+            bookDomain.Genre = bookDTO.Genre;
+            bookDomain.CoverUrl = bookDTO.CoverUrl;
+            bookDomain.DateAdded = bookDTO.DateAdded;
+            bookDomain.PublisherID = bookDTO.PublisherID;
+
+            _dbContext.SaveChanges();
+
+            // Update Authors
+            var oldAuthors = _dbContext.Books_Authors.Where(a => a.BookId == id).ToList();
+            _dbContext.Books_Authors.RemoveRange(oldAuthors);
+            _dbContext.SaveChanges();
+
+            foreach (var authorId in bookDTO.AuthorIds)
             {
                 var _book_author = new Book_Authors()
                 {
                     BookId = id,
-                    AuthorId = authorid
+                    AuthorId = authorId
                 };
-
                 _dbContext.Books_Authors.Add(_book_author);
-                _dbContext.SaveChanges();
             }
+            _dbContext.SaveChanges();
+
             return bookDTO;
         }
         public Books? DeleteBookById(int id)

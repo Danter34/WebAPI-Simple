@@ -39,15 +39,29 @@ namespace WebAPI.Controllers
         [HttpPost("add-book")]
         public IActionResult AddBook([FromBody] AddBookRequestDTO addBookRequestDTO)
         {
-            var bookAdd = _bookRepository.AddBook(addBookRequestDTO);
-            return Ok(bookAdd);
+            try
+            {
+                var bookAdd = _bookRepository.AddBook(addBookRequestDTO);
+                return Ok(bookAdd);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
         }
 
         [HttpPut("update-book-by-id/{id}")]
         public IActionResult UpdateBookById(int id, [FromBody] AddBookRequestDTO bookDTO)
         {
-            var updateBook = _bookRepository.UpdateBookById(id, bookDTO);
-            return Ok(updateBook);
+            try
+            {
+                var updateBook = _bookRepository.UpdateBookById(id, bookDTO);
+                return Ok(updateBook);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
         }
         [HttpDelete("delete-book-by-id/{id}")]
         public IActionResult DeleteBookById(int id)
