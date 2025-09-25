@@ -9,5 +9,7 @@ namespace WebAPI.Repositories
         AddPublisherRequestDTO AddPublisher(AddPublisherRequestDTO addPublisherRequestDTO);
         PublisherNoIdDTO UpdatePublisherById(int id, PublisherNoIdDTO publisherNoIdDTO);
         Publishers? DeletePublisherById(int id);
+        bool ExistsByName(string name);
+        bool ExistsById(int id);
     }
 }

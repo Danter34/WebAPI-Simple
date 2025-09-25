@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WebAPI.Data;
+using WebAPI.Models.Domain;
 using WebAPI.Models.DTO;
 using WebAPI.Repositories;
 
@@ -36,8 +37,13 @@ namespace WebAPI.Controllers
         [HttpPost("add-Publisher")]
         public IActionResult AddPublisher([FromBody] AddPublisherRequestDTO addpublisherRequestDTO)
         {
-            var PublisherAdd = _publisherRepository.AddPublisher(addpublisherRequestDTO);
-            return Ok(PublisherAdd);
+            if (ValidateAddPublisher(addpublisherRequestDTO))
+            {
+                var PublisherAdd = _publisherRepository.AddPublisher(addpublisherRequestDTO);
+                return Ok(PublisherAdd);
+            }
+            else return BadRequest(ModelState);
+           
         }
 
         [HttpPut("update-Publisher-by-id/{id}")]
@@ -49,8 +55,44 @@ namespace WebAPI.Controllers
         [HttpDelete("delete-publisher-by-id/{id}")]
         public IActionResult DeletePublisherById(int id)
         {
-            var deletepublisher = _publisherRepository.DeletePublisherById(id);
-            return Ok(deletepublisher);
+            if (ValidateDeletePublisher(id))
+            {
+                var deletepublisher = _publisherRepository.DeletePublisherById(id);
+                return Ok(deletepublisher);
+            }
+            else return BadRequest(ModelState);
+            
+        }
+        private bool ValidateAddPublisher(AddPublisherRequestDTO addPublisherRequestDTO)
+        {
+            if (!string.IsNullOrWhiteSpace(addPublisherRequestDTO.Name) && _publisherRepository.ExistsByName(addPublisherRequestDTO.Name))
+            {
+                ModelState.AddModelError(nameof(addPublisherRequestDTO.Name), $"{nameof(addPublisherRequestDTO.Name)} already exists");
+            }
+            if (ModelState.ErrorCount > 0)
+            {
+                return false;
+            }
+            return true;
+        }
+        private bool ValidateDeletePublisher(int id) 
+        {
+            var publisher = _dbContext.Publishers.FirstOrDefault(p => p.Id == id);
+            if (publisher == null)
+            {
+                ModelState.AddModelError(nameof(id), $"Publisher with ID {id} does not exist.");
+            }
+
+            var hasBooks = _dbContext.Books.Any(b => b.PublisherID == id);
+            if (hasBooks)
+            {
+                ModelState.AddModelError(nameof(id), $"Cannot delete Publisher with ID {id} because it has related Books.");
+            }
+            if (ModelState.ErrorCount > 0)
+            {
+                return false;
+            }
+            return true;
         }
     }
 }

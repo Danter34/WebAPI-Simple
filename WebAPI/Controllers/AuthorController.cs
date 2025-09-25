@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using WebAPI.CustomActionFilter;
 using WebAPI.Data;
+using WebAPI.Models.Domain;
 using WebAPI.Models.DTO;
 using WebAPI.Repositories;
 
@@ -34,10 +36,16 @@ namespace WebAPI.Controllers
             return Ok(AuthorWithIdDTO);
         }
         [HttpPost("add-Author")]
+        [ValidateModel]
         public IActionResult AddAuthor([FromBody] AddAuthorRequestDTO addauthorRequestDTO)
         {
-            var authorAdd = _authorRepository.AddAuthor(addauthorRequestDTO);
-            return Ok(authorAdd);
+            if (ValidateAddAuthor(addauthorRequestDTO))
+            {
+                var authorAdd = _authorRepository.AddAuthor(addauthorRequestDTO);
+                return Ok(authorAdd);
+            }
+            else return BadRequest(ModelState);
+           
         }
 
         [HttpPut("update-Author-by-id/{id}")]
@@ -49,8 +57,48 @@ namespace WebAPI.Controllers
         [HttpDelete("delete-author-by-id/{id}")]
         public IActionResult DeleteAuthorById(int id)
         {
-            var deleteauthor = _authorRepository.DeleteAuthorById(id);
-            return Ok(deleteauthor);
+            if (ValidateDeleteAuthor(id))
+            {
+                var deleteauthor = _authorRepository.DeleteAuthorById(id);
+                return Ok(deleteauthor);
+            }
+            else return BadRequest(ModelState);
+        }
+        private bool ValidateAddAuthor(AddAuthorRequestDTO addAuthorRequestDTO)
+        {
+            if (string.IsNullOrWhiteSpace(addAuthorRequestDTO.FullName))
+            {
+                ModelState.AddModelError(nameof(addAuthorRequestDTO.FullName), $"{nameof(addAuthorRequestDTO.FullName)} cannot be empty");
+            }
+            else if (addAuthorRequestDTO.FullName.Length < 3)
+            {
+                ModelState.AddModelError(nameof(addAuthorRequestDTO.FullName), $"{nameof(addAuthorRequestDTO.FullName)} must be at least 3 characters long");
+            }
+            if (ModelState.ErrorCount > 0)
+            {
+                return false;
+            }
+            return true;
+        }
+        private bool ValidateDeleteAuthor(int id)
+        {
+            var author = _dbContext.Authors.FirstOrDefault(a => a.Id == id);
+            if (author == null)
+            {
+                ModelState.AddModelError("AuthorId", $"Author with ID {id} does not exist.");
+            }
+
+            // Kiểm tra liên kết qua bảng Book_Authors
+            var hasLinks = _dbContext.Books_Authors.Any(ba => ba.AuthorId == id);
+            if (hasLinks)
+            {
+                ModelState.AddModelError("AuthorId", $"Cannot delete Author with ID {id} because it is linked to one or more Books via Book_Authors.");
+            }
+            if (ModelState.ErrorCount > 0)
+            {
+                return false;
+            }
+            return true;
         }
     }
 }

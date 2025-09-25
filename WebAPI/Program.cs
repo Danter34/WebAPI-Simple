@@ -17,6 +17,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddScoped<IBookRepository, SQLBookRepository>();
 builder.Services.AddScoped<IAuthorRepository, SQLAuthorRepository>();
 builder.Services.AddScoped<IPublisherRepository, SQLPublisherRepository>();
+builder.Services.AddScoped<IBook_AuthorRepository, SQLBook_Author>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -1,4 +1,5 @@
-﻿using WebAPI.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using WebAPI.Data;
 using WebAPI.Models.Domain;
 using WebAPI.Models.DTO;
 
@@ -59,5 +60,14 @@ namespace WebAPI.Repositories
             }
             return null;
         }
+        public bool ExistsByName(string name)
+        {
+            return _dbContext.Publishers.Any(p => p.Name.ToLower() == name.ToLower());
+        }
+        public bool ExistsById(int id)
+        {
+            return _dbContext.Publishers.Any(p => p.Id == id);
+        }
+
     }
 }
