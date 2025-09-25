@@ -1,7 +1,8 @@
 using Microsoft.EntityFrameworkCore;
+using WebAPI.CustomActionFilter;
 using WebAPI.Data;
 using WebAPI.Repositories;
-
+using WebAPI.Middleware;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -18,6 +19,9 @@ builder.Services.AddScoped<IBookRepository, SQLBookRepository>();
 builder.Services.AddScoped<IAuthorRepository, SQLAuthorRepository>();
 builder.Services.AddScoped<IPublisherRepository, SQLPublisherRepository>();
 builder.Services.AddScoped<IBook_AuthorRepository, SQLBook_Author>();
+builder.Services.AddScoped<ValidatePublisherExistsAttribute>();
+builder.Services.AddScoped<ValidateBookAuthorNotExistsAttribute>();
+builder.Services.AddScoped<ValidateAuthorCanDeleteAttribute>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -28,6 +32,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseMiddleware<ValidateBookJsonFieldsMiddleware>();
 
 app.UseAuthorization();
 

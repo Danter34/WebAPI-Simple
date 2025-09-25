@@ -44,6 +44,7 @@ namespace WebAPI.Controllers
         }
         [HttpPost("add-book")]
         [ValidateModel]
+        [ServiceFilter(typeof(ValidatePublisherExistsAttribute))]
         public IActionResult AddBook([FromBody] AddBookRequestDTO addBookRequestDTO)
         {
             if (ValidateAddBook(addBookRequestDTO))

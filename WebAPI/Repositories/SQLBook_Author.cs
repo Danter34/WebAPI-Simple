@@ -32,6 +32,10 @@ namespace WebAPI.Repositories
         {
             return _dbContext.Authors.Any(a => a.Id == authorId);
         }
+        public bool Exists(int bookId, int authorId)
+        {
+            return _dbContext.Books_Authors.Any(ba => ba.BookId == bookId && ba.AuthorId == authorId);
+        }
 
     }
 }

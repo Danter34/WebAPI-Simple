@@ -3,56 +3,96 @@
   "WorkspaceRootPath": "E:\\LTWEB2\\Thuchanh\\WebAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|E:\\LTWEB2\\Thuchanh\\WebAPI\\webapi\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|E:\\LTWEB2\\Thuchanh\\WebAPI\\webapi\\models\\domain\\books.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\models\\domain\\books.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|E:\\LTWEB2\\Thuchanh\\WebAPI\\webapi\\controllers\\authorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\authorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|e:\\ltweb2\\thuchanh\\webapi\\webapi\\controllers\\book_authorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\book_authorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|E:\\LTWEB2\\Thuchanh\\WebAPI\\webapi\\models\\domain\\book_authors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\models\\domain\\book_authors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|E:\\LTWEB2\\Thuchanh\\WebAPI\\webapi\\controllers\\publishercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\publishercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|e:\\ltweb2\\thuchanh\\webapi\\webapi\\middleware\\validatebookjsonfieldsmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\middleware\\validatebookjsonfieldsmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|E:\\LTWEB2\\Thuchanh\\WebAPI\\webapi\\repositories\\sqlpublisherrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\repositories\\sqlpublisherrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|E:\\LTWEB2\\Thuchanh\\WebAPI\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|E:\\LTWEB2\\Thuchanh\\WebAPI\\webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|E:\\LTWEB2\\Thuchanh\\WebAPI\\webapi\\repositories\\sqlbookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\repositories\\sqlbookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|E:\\LTWEB2\\Thuchanh\\WebAPI\\webapi\\repositories\\sqlpublisherrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\repositories\\sqlpublisherrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|E:\\LTWEB2\\Thuchanh\\WebAPI\\webapi\\webapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\webapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|E:\\LTWEB2\\Thuchanh\\WebAPI\\webapi\\controllers\\authorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\authorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|E:\\LTWEB2\\Thuchanh\\WebAPI\\webapi\\models\\domain\\authors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\models\\domain\\authors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|E:\\LTWEB2\\Thuchanh\\WebAPI\\webapi\\models\\dto\\publisherdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\models\\dto\\publisherdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|E:\\LTWEB2\\Thuchanh\\WebAPI\\webapi\\repositories\\sqlbook_author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\repositories\\sqlbook_author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|E:\\LTWEB2\\Thuchanh\\WebAPI\\webapi\\repositories\\ibookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\repositories\\ibookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|e:\\ltweb2\\thuchanh\\webapi\\webapi\\customactionfilter\\validateauthorcandeleteattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\customactionfilter\\validateauthorcandeleteattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|e:\\ltweb2\\thuchanh\\webapi\\webapi\\customactionfilter\\validatepublisherexistsattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\customactionfilter\\validatepublisherexistsattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|e:\\ltweb2\\thuchanh\\webapi\\webapi\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|E:\\LTWEB2\\Thuchanh\\WebAPI\\webapi\\controllers\\book_authorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\book_authorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|e:\\ltweb2\\thuchanh\\webapi\\webapi\\customactionfilter\\validatebookauthornotexistsattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\customactionfilter\\validatebookauthornotexistsattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|E:\\LTWEB2\\Thuchanh\\WebAPI\\webapi\\repositories\\ibook_authorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\repositories\\ibook_authorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|E:\\LTWEB2\\Thuchanh\\WebAPI\\webapi\\models\\dto\\addbook_authorrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\models\\dto\\addbook_authorrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|E:\\LTWEB2\\Thuchanh\\WebAPI\\webapi\\repositories\\iauthorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\repositories\\iauthorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|E:\\LTWEB2\\Thuchanh\\WebAPI\\webapi\\models\\dto\\publisherdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\models\\dto\\publisherdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|E:\\LTWEB2\\Thuchanh\\WebAPI\\webapi\\repositories\\sqlauthorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\repositories\\sqlauthorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|E:\\LTWEB2\\Thuchanh\\WebAPI\\webapi\\controllers\\publishercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\publishercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|E:\\LTWEB2\\Thuchanh\\WebAPI\\webapi\\repositories\\ibookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\repositories\\ibookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|E:\\LTWEB2\\Thuchanh\\WebAPI\\webapi\\models\\dto\\addbook_authorrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\models\\dto\\addbook_authorrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|E:\\LTWEB2\\Thuchanh\\WebAPI\\webapi\\repositories\\ipublisherrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -61,14 +101,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|E:\\LTWEB2\\Thuchanh\\WebAPI\\webapi\\models\\dto\\addbookrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\models\\dto\\addbookrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|E:\\LTWEB2\\Thuchanh\\WebAPI\\webapi\\repositories\\sqlauthorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\repositories\\sqlauthorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|E:\\LTWEB2\\Thuchanh\\WebAPI\\webapi\\repositories\\iauthorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\repositories\\iauthorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|E:\\LTWEB2\\Thuchanh\\WebAPI\\webapi\\models\\dto\\addauthorrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -87,24 +119,12 @@
       "RelativeMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\models\\dto\\addpublisherrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|E:\\LTWEB2\\Thuchanh\\WebAPI\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|E:\\LTWEB2\\Thuchanh\\WebAPI\\webapi\\models\\domain\\authors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\models\\domain\\authors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|E:\\LTWEB2\\Thuchanh\\WebAPI\\webapi\\models\\domain\\publishers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\models\\domain\\publishers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|E:\\LTWEB2\\Thuchanh\\WebAPI\\webapi\\customactionfilter\\validatemodelattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\customactionfilter\\validatemodelattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|E:\\LTWEB2\\Thuchanh\\WebAPI\\webapi\\webapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\webapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Migrations\\20250917101810_add.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -117,10 +137,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Migrations\\20250917101117_add.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WebAPI\\Migrations\\20250917101117_add.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|E:\\LTWEB2\\Thuchanh\\WebAPI\\webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0A7965A8-C569-41E8-812F-BFFD37DC1E66}|WebAPI\\WebAPI.csproj|E:\\LTWEB2\\Thuchanh\\WebAPI\\webapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -138,7 +154,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -146,46 +162,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "PublisherController.cs",
-              "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Controllers\\PublisherController.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Controllers\\PublisherController.cs",
-              "ToolTip": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Controllers\\PublisherController.cs",
-              "RelativeToolTip": "WebAPI\\Controllers\\PublisherController.cs",
-              "ViewState": "AQIAAD0AAAAAAAAAAAAkwDYAAAAzAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T08:05:21.466Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "SQLPublisherRepository.cs",
-              "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Repositories\\SQLPublisherRepository.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Repositories\\SQLPublisherRepository.cs",
-              "ToolTip": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Repositories\\SQLPublisherRepository.cs",
-              "RelativeToolTip": "WebAPI\\Repositories\\SQLPublisherRepository.cs",
-              "ViewState": "AQIAACsAAAAAAAAAAAAkwBgAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T07:10:22.963Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "AuthorController.cs",
-              "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Controllers\\AuthorController.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Controllers\\AuthorController.cs",
-              "ToolTip": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Controllers\\AuthorController.cs",
-              "RelativeToolTip": "WebAPI\\Controllers\\AuthorController.cs",
-              "ViewState": "AQIAAEkAAAAAAAAAAAAAAGMAAAANAAAA",
+              "Title": "ValidateBookJsonFieldsMiddleware.cs",
+              "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Middleware\\ValidateBookJsonFieldsMiddleware.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Middleware\\ValidateBookJsonFieldsMiddleware.cs",
+              "ToolTip": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Middleware\\ValidateBookJsonFieldsMiddleware.cs",
+              "RelativeToolTip": "WebAPI\\Middleware\\ValidateBookJsonFieldsMiddleware.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAYwCsAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T08:05:06.616Z",
+              "WhenOpened": "2025-09-25T06:48:38.067Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SQLBookRepository.cs",
+              "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Repositories\\SQLBookRepository.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Repositories\\SQLBookRepository.cs",
+              "ToolTip": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Repositories\\SQLBookRepository.cs",
+              "RelativeToolTip": "WebAPI\\Repositories\\SQLBookRepository.cs",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAswEIAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T06:45:57.048Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Program.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Program.cs",
+              "ToolTip": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Program.cs",
+              "RelativeToolTip": "WebAPI\\Program.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAAB8AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-15T07:57:58.07Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "WebAPI\\appsettings.json",
+              "ToolTip": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\appsettings.json",
+              "RelativeToolTip": "WebAPI\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-15T07:55:43.887Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Book_Authors.cs",
               "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Models\\Domain\\Book_Authors.cs",
               "RelativeDocumentMoniker": "WebAPI\\Models\\Domain\\Book_Authors.cs",
@@ -199,19 +228,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "BooksController.cs",
-              "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Controllers\\BooksController.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Controllers\\BooksController.cs",
-              "ToolTip": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Controllers\\BooksController.cs",
-              "RelativeToolTip": "WebAPI\\Controllers\\BooksController.cs",
-              "ViewState": "AQIAAJEAAAAAAAAAAAAwwK4AAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T08:07:13.633Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "Books.cs",
               "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Models\\Domain\\Books.cs",
               "RelativeDocumentMoniker": "WebAPI\\Models\\Domain\\Books.cs",
@@ -224,85 +240,46 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SQLPublisherRepository.cs",
+              "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Repositories\\SQLPublisherRepository.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Repositories\\SQLPublisherRepository.cs",
+              "ToolTip": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Repositories\\SQLPublisherRepository.cs",
+              "RelativeToolTip": "WebAPI\\Repositories\\SQLPublisherRepository.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAAkwEQAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T07:10:22.963Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "SQLBook_Author.cs",
-              "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Repositories\\SQLBook_Author.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Repositories\\SQLBook_Author.cs",
-              "ToolTip": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Repositories\\SQLBook_Author.cs",
-              "RelativeToolTip": "WebAPI\\Repositories\\SQLBook_Author.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAyAAAA",
+              "Title": "AuthorController.cs",
+              "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Controllers\\AuthorController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\AuthorController.cs",
+              "ToolTip": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Controllers\\AuthorController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\AuthorController.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAAAmwDkAAABBAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-22T03:33:36.879Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Book_AuthorController.cs",
-              "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Controllers\\Book_AuthorController.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Controllers\\Book_AuthorController.cs",
-              "ToolTip": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Controllers\\Book_AuthorController.cs",
-              "RelativeToolTip": "WebAPI\\Controllers\\Book_AuthorController.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAYwC8AAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-22T03:52:07.763Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "SQLBookRepository.cs",
-              "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Repositories\\SQLBookRepository.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Repositories\\SQLBookRepository.cs",
-              "ToolTip": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Repositories\\SQLBookRepository.cs",
-              "RelativeToolTip": "WebAPI\\Repositories\\SQLBookRepository.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAAwEUAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T06:45:57.048Z",
+              "WhenOpened": "2025-09-17T08:05:06.616Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "IBookRepository.cs",
-              "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Repositories\\IBookRepository.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Repositories\\IBookRepository.cs",
-              "ToolTip": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Repositories\\IBookRepository.cs",
-              "RelativeToolTip": "WebAPI\\Repositories\\IBookRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABHAAAA",
+              "Title": "Authors.cs",
+              "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Models\\Domain\\Authors.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Models\\Domain\\Authors.cs",
+              "ToolTip": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Models\\Domain\\Authors.cs",
+              "RelativeToolTip": "WebAPI\\Models\\Domain\\Authors.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T06:44:31.331Z",
+              "WhenOpened": "2025-09-15T07:34:44.141Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "IBook_AuthorRepository.cs",
-              "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Repositories\\IBook_AuthorRepository.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Repositories\\IBook_AuthorRepository.cs",
-              "ToolTip": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Repositories\\IBook_AuthorRepository.cs",
-              "RelativeToolTip": "WebAPI\\Repositories\\IBook_AuthorRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-22T03:34:08.728Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AddBook_AuthorRequestDTO.cs",
-              "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Models\\DTO\\AddBook_AuthorRequestDTO.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Models\\DTO\\AddBook_AuthorRequestDTO.cs",
-              "ToolTip": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Models\\DTO\\AddBook_AuthorRequestDTO.cs",
-              "RelativeToolTip": "WebAPI\\Models\\DTO\\AddBook_AuthorRequestDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-22T03:46:21.968Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
               "Title": "PublisherDTO.cs",
               "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Models\\DTO\\PublisherDTO.cs",
               "RelativeDocumentMoniker": "WebAPI\\Models\\DTO\\PublisherDTO.cs",
@@ -315,7 +292,173 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "SQLBook_Author.cs",
+              "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Repositories\\SQLBook_Author.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Repositories\\SQLBook_Author.cs",
+              "ToolTip": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Repositories\\SQLBook_Author.cs",
+              "RelativeToolTip": "WebAPI\\Repositories\\SQLBook_Author.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAQwCgAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-22T03:33:36.879Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "WebAPI.csproj",
+              "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\WebAPI.csproj",
+              "RelativeDocumentMoniker": "WebAPI\\WebAPI.csproj",
+              "ToolTip": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\WebAPI.csproj",
+              "RelativeToolTip": "WebAPI\\WebAPI.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-15T07:09:36.085Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 13,
+              "Title": "ValidatePublisherExistsAttribute.cs",
+              "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\CustomActionFilter\\ValidatePublisherExistsAttribute.cs",
+              "RelativeDocumentMoniker": "WebAPI\\CustomActionFilter\\ValidatePublisherExistsAttribute.cs",
+              "ToolTip": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\CustomActionFilter\\ValidatePublisherExistsAttribute.cs",
+              "RelativeToolTip": "WebAPI\\CustomActionFilter\\ValidatePublisherExistsAttribute.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAABVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T06:19:41.843Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "BooksController.cs",
+              "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Controllers\\BooksController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\BooksController.cs",
+              "ToolTip": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Controllers\\BooksController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\BooksController.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAAkwC0AAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-15T08:07:13.633Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "IBook_AuthorRepository.cs",
+              "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Repositories\\IBook_AuthorRepository.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Repositories\\IBook_AuthorRepository.cs",
+              "ToolTip": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Repositories\\IBook_AuthorRepository.cs",
+              "RelativeToolTip": "WebAPI\\Repositories\\IBook_AuthorRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-22T03:34:08.728Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ValidateAuthorCanDeleteAttribute.cs",
+              "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\CustomActionFilter\\ValidateAuthorCanDeleteAttribute.cs",
+              "RelativeDocumentMoniker": "WebAPI\\CustomActionFilter\\ValidateAuthorCanDeleteAttribute.cs",
+              "ToolTip": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\CustomActionFilter\\ValidateAuthorCanDeleteAttribute.cs",
+              "RelativeToolTip": "WebAPI\\CustomActionFilter\\ValidateAuthorCanDeleteAttribute.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAB0AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T06:42:06.468Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Book_AuthorController.cs",
+              "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Controllers\\Book_AuthorController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\Book_AuthorController.cs",
+              "ToolTip": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Controllers\\Book_AuthorController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\Book_AuthorController.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAwwBQAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-22T03:52:07.763Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ValidateBookAuthorNotExistsAttribute.cs",
+              "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\CustomActionFilter\\ValidateBookAuthorNotExistsAttribute.cs",
+              "RelativeDocumentMoniker": "WebAPI\\CustomActionFilter\\ValidateBookAuthorNotExistsAttribute.cs",
+              "ToolTip": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\CustomActionFilter\\ValidateBookAuthorNotExistsAttribute.cs",
+              "RelativeToolTip": "WebAPI\\CustomActionFilter\\ValidateBookAuthorNotExistsAttribute.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAB8AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T06:26:28.299Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "IAuthorRepository.cs",
+              "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Repositories\\IAuthorRepository.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Repositories\\IAuthorRepository.cs",
+              "ToolTip": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Repositories\\IAuthorRepository.cs",
+              "RelativeToolTip": "WebAPI\\Repositories\\IAuthorRepository.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T07:04:12.045Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "SQLAuthorRepository.cs",
+              "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Repositories\\SQLAuthorRepository.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Repositories\\SQLAuthorRepository.cs",
+              "ToolTip": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Repositories\\SQLAuthorRepository.cs",
+              "RelativeToolTip": "WebAPI\\Repositories\\SQLAuthorRepository.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAgwCcAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T07:08:44.861Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "PublisherController.cs",
+              "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Controllers\\PublisherController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\PublisherController.cs",
+              "ToolTip": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Controllers\\PublisherController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\PublisherController.cs",
+              "ViewState": "AQIAAD0AAAAAAAAAAAAkwDYAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T08:05:21.466Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "IBookRepository.cs",
+              "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Repositories\\IBookRepository.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Repositories\\IBookRepository.cs",
+              "ToolTip": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Repositories\\IBookRepository.cs",
+              "RelativeToolTip": "WebAPI\\Repositories\\IBookRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T06:44:31.331Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "AddBook_AuthorRequestDTO.cs",
+              "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Models\\DTO\\AddBook_AuthorRequestDTO.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Models\\DTO\\AddBook_AuthorRequestDTO.cs",
+              "ToolTip": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Models\\DTO\\AddBook_AuthorRequestDTO.cs",
+              "RelativeToolTip": "WebAPI\\Models\\DTO\\AddBook_AuthorRequestDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-22T03:46:21.968Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
               "Title": "IPublisherRepository.cs",
               "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Repositories\\IPublisherRepository.cs",
               "RelativeDocumentMoniker": "WebAPI\\Repositories\\IPublisherRepository.cs",
@@ -323,12 +466,11 @@
               "RelativeToolTip": "WebAPI\\Repositories\\IPublisherRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T07:09:51.562Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-17T07:09:51.562Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 24,
               "Title": "AddBookRequestDTO.cs",
               "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Models\\DTO\\AddBookRequestDTO.cs",
               "RelativeDocumentMoniker": "WebAPI\\Models\\DTO\\AddBookRequestDTO.cs",
@@ -340,31 +482,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "SQLAuthorRepository.cs",
-              "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Repositories\\SQLAuthorRepository.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Repositories\\SQLAuthorRepository.cs",
-              "ToolTip": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Repositories\\SQLAuthorRepository.cs",
-              "RelativeToolTip": "WebAPI\\Repositories\\SQLAuthorRepository.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAYwCcAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T07:08:44.861Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "IAuthorRepository.cs",
-              "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Repositories\\IAuthorRepository.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Repositories\\IAuthorRepository.cs",
-              "ToolTip": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Repositories\\IAuthorRepository.cs",
-              "RelativeToolTip": "WebAPI\\Repositories\\IAuthorRepository.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T07:04:12.045Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 25,
               "Title": "AddAuthorRequestDTO.cs",
               "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Models\\DTO\\AddAuthorRequestDTO.cs",
               "RelativeDocumentMoniker": "WebAPI\\Models\\DTO\\AddAuthorRequestDTO.cs",
@@ -376,7 +494,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 26,
               "Title": "BookWithAuthorAndPublisherDTO.cs",
               "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Models\\DTO\\BookWithAuthorAndPublisherDTO.cs",
               "RelativeDocumentMoniker": "WebAPI\\Models\\DTO\\BookWithAuthorAndPublisherDTO.cs",
@@ -388,7 +506,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 27,
               "Title": "AuthorDTO.cs",
               "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Models\\DTO\\AuthorDTO.cs",
               "RelativeDocumentMoniker": "WebAPI\\Models\\DTO\\AuthorDTO.cs",
@@ -400,7 +518,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 28,
               "Title": "AddPublisherRequestDTO.cs",
               "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Models\\DTO\\AddPublisherRequestDTO.cs",
               "RelativeDocumentMoniker": "WebAPI\\Models\\DTO\\AddPublisherRequestDTO.cs",
@@ -412,31 +530,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Program.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Program.cs",
-              "ToolTip": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Program.cs",
-              "RelativeToolTip": "WebAPI\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T07:57:58.07Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Authors.cs",
-              "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Models\\Domain\\Authors.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Models\\Domain\\Authors.cs",
-              "ToolTip": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Models\\Domain\\Authors.cs",
-              "RelativeToolTip": "WebAPI\\Models\\Domain\\Authors.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T07:34:44.141Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 29,
               "Title": "Publishers.cs",
               "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Models\\Domain\\Publishers.cs",
               "RelativeDocumentMoniker": "WebAPI\\Models\\Domain\\Publishers.cs",
@@ -448,7 +542,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 30,
               "Title": "ValidateModelAttribute.cs",
               "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\CustomActionFilter\\ValidateModelAttribute.cs",
               "RelativeDocumentMoniker": "WebAPI\\CustomActionFilter\\ValidateModelAttribute.cs",
@@ -460,19 +554,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "WebAPI.csproj",
-              "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\WebAPI.csproj",
-              "RelativeDocumentMoniker": "WebAPI\\WebAPI.csproj",
-              "ToolTip": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\WebAPI.csproj",
-              "RelativeToolTip": "WebAPI\\WebAPI.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-09-15T07:09:36.085Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 35,
               "Title": "20250917102115_add.cs",
               "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Migrations\\20250917102115_add.cs",
               "RelativeDocumentMoniker": "WebAPI\\Migrations\\20250917102115_add.cs",
@@ -484,7 +566,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 32,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "WebAPI\\Data\\AppDbContext.cs",
@@ -496,7 +578,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 33,
               "Title": "20250917101117_add.cs",
               "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Migrations\\20250917101117_add.cs",
               "RelativeDocumentMoniker": "WebAPI\\Migrations\\20250917101117_add.cs",
@@ -508,7 +590,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 31,
               "Title": "20250917101810_add.cs",
               "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Migrations\\20250917101810_add.cs",
               "RelativeDocumentMoniker": "WebAPI\\Migrations\\20250917101810_add.cs",
@@ -520,19 +602,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\appsettings.json",
-              "RelativeDocumentMoniker": "WebAPI\\appsettings.json",
-              "ToolTip": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\appsettings.json",
-              "RelativeToolTip": "WebAPI\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-09-15T07:55:43.887Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 34,
               "Title": "WeatherForecastController.cs",
               "DocumentMoniker": "E:\\LTWEB2\\Thuchanh\\WebAPI\\WebAPI\\Controllers\\WeatherForecastController.cs",
               "RelativeDocumentMoniker": "WebAPI\\Controllers\\WeatherForecastController.cs",

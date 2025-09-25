@@ -52,22 +52,6 @@ namespace WebAPI.Repositories
 
         public AddBookRequestDTO AddBook(AddBookRequestDTO addBookRequestDTO)
         {
-            // Check Publisher tồn tại
-            var publisherExists = _dbContext.Publishers.Any(p => p.Id == addBookRequestDTO.PublisherID);
-            if (!publisherExists)
-            {
-                throw new Exception($"Publisher with ID {addBookRequestDTO.PublisherID} does not exist.");
-            }
-
-            // Check Author tồn tại
-            foreach (var authorId in addBookRequestDTO.AuthorIds)
-            {
-                var authorExists = _dbContext.Authors.Any(a => a.Id == authorId);
-                if (!authorExists)
-                {
-                    throw new Exception($"Author with ID {authorId} does not exist.");
-                }
-            }
 
             // Map DTO → Domain
             var bookDomainModel = new Books
