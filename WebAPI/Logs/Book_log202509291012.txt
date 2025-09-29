@@ -1,0 +1,10 @@
+2025-09-29 10:12:11.242 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7021/api/Books/get-all-books?pageNumber=1&pageSize=100 - null null
+2025-09-29 10:12:11.305 +07:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Read)
+2025-09-29 10:12:11.309 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-09-29 10:12:11.310 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7021/api/Books/get-all-books?pageNumber=1&pageSize=100 - 401 0 null 68.088ms
+2025-09-29 10:12:23.800 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7021/api/Books/get-book-by-id/1 - null null
+2025-09-29 10:12:23.806 +07:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Read)
+2025-09-29 10:12:23.808 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-09-29 10:12:23.809 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7021/api/Books/get-book-by-id/1 - 401 0 null 9.5106ms

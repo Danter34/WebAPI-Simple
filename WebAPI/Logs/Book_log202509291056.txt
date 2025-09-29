@@ -1,0 +1,50 @@
+2025-09-29 10:56:19.258 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7021/api/User/Login - application/json 61
+2025-09-29 10:56:19.263 +07:00 [INF] Executing endpoint 'WebAPI.Controllers.UserController.Login (WebAPI)'
+2025-09-29 10:56:19.268 +07:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(WebAPI.Models.DTO.LoginRequestDTO) on controller WebAPI.Controllers.UserController (WebAPI).
+2025-09-29 10:56:19.327 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-09-29 10:56:19.435 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-09-29 10:56:19.460 +07:00 [INF] Executing OkObjectResult, writing value of type 'WebAPI.Models.DTO.LoginResponseDTO'.
+2025-09-29 10:56:19.465 +07:00 [INF] Executed action WebAPI.Controllers.UserController.Login (WebAPI) in 194.1995ms
+2025-09-29 10:56:19.466 +07:00 [INF] Executed endpoint 'WebAPI.Controllers.UserController.Login (WebAPI)'
+2025-09-29 10:56:19.466 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7021/api/User/Login - 200 null application/json; charset=utf-8 209.1341ms
+2025-09-29 10:56:48.627 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7021/api/Books/get-all-books?pageNumber=1&pageSize=100 - null null
+2025-09-29 10:56:48.675 +07:00 [INF] Executing endpoint 'WebAPI.Controllers.BooksController.GetAll (WebAPI)'
+2025-09-29 10:56:48.679 +07:00 [INF] Route matched with {action = "GetAll", controller = "Books"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll(System.String, System.String, System.String, Boolean, Int32, Int32) on controller WebAPI.Controllers.BooksController (WebAPI).
+2025-09-29 10:56:48.687 +07:00 [INF] GetAll Book Action method was invoked
+2025-09-29 10:56:48.687 +07:00 [WRN] This is a warning log
+2025-09-29 10:56:48.688 +07:00 [ERR] This is a error log
+2025-09-29 10:56:48.772 +07:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2025-09-29 10:56:48.774 +07:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2025-09-29 10:56:48.840 +07:00 [INF] Executed DbCommand (15ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Title], [t].[Description], [t].[IsRead], CASE
+    WHEN [t].[IsRead] = CAST(1 AS bit) THEN [t].[DateRead]
+    ELSE NULL
+END, CASE
+    WHEN [t].[IsRead] = CAST(1 AS bit) THEN [t].[Rate]
+    ELSE NULL
+END, [t].[Genre], [t].[CoverUrl], [p].[Name], [p].[Id], [t0].[FullName], [t0].[Id], [t0].[Id0]
+FROM (
+    SELECT [b].[Id], [b].[CoverUrl], [b].[DateRead], [b].[Description], [b].[Genre], [b].[IsRead], [b].[PublisherID], [b].[Rate], [b].[Title]
+    FROM [Books] AS [b]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [Publishers] AS [p] ON [t].[PublisherID] = [p].[Id]
+LEFT JOIN (
+    SELECT [a].[FullName], [b0].[Id], [a].[Id] AS [Id0], [b0].[BookId]
+    FROM [Books_Authors] AS [b0]
+    INNER JOIN [Authors] AS [a] ON [b0].[AuthorId] = [a].[Id]
+) AS [t0] ON [t].[Id] = [t0].[BookId]
+ORDER BY [t].[Id], [p].[Id], [t0].[Id]
+2025-09-29 10:56:48.857 +07:00 [INF] Finished GetAllBook request with data [{"Id":2,"Title":"The Shining","Description":"A psychological horror novel.","IsRead":true,"DateRead":"2023-02-20T00:00:00","Rate":4,"Genre":"Horror","CoverUrl":"http://example.com/cover2.jpg","DateAdded":"0001-01-01T00:00:00","PublisherName":"HarperCollins","AuthorNames":["Stephen King","Stephen King"]},{"Id":3,"Title":"And Then There Were None","Description":"A classic mystery novel.","IsRead":true,"DateRead":"2023-03-25T00:00:00","Rate":5,"Genre":"Mystery","CoverUrl":"http://example.com/cover3.jpg","DateAdded":"0001-01-01T00:00:00","PublisherName":"Simon \u0026 Schuster","AuthorNames":["Agatha Christie","Agatha Christie","Agatha Christie"]},{"Id":4,"Title":"A Game of Thrones","Description":"The first novel in A Song of Ice and Fire series.","IsRead":false,"DateRead":null,"Rate":null,"Genre":"Fantasy","CoverUrl":"http://example.com/cover4.jpg","DateAdded":"0001-01-01T00:00:00","PublisherName":"Macmillan Publishers","AuthorNames":["George R.R. Martin"]},{"Id":5,"Title":"Norwegian Wood","Description":"A coming-of-age novel.","IsRead":true,"DateRead":"2023-05-30T00:00:00","Rate":4,"Genre":"Fiction","CoverUrl":"http://example.com/cover5.jpg","DateAdded":"0001-01-01T00:00:00","PublisherName":"Hachette Livre","AuthorNames":["Haruki Murakami"]},{"Id":6,"Title":"stringstri","Description":"string","IsRead":true,"DateRead":"2025-09-25T05:57:39.662","Rate":2,"Genre":"string","CoverUrl":"string","DateAdded":"0001-01-01T00:00:00","PublisherName":"Penguin Random House","AuthorNames":["Stephen King"]},{"Id":7,"Title":"stringstri","Description":"string","IsRead":true,"DateRead":"2025-09-25T06:02:58.038","Rate":1,"Genre":"string","CoverUrl":"string","DateAdded":"0001-01-01T00:00:00","PublisherName":"Penguin Random House","AuthorNames":["J.K. Rowling"]},{"Id":8,"Title":"stringstri","Description":"string","IsRead":true,"DateRead":"2025-09-25T06:02:58.038","Rate":1,"Genre":"string","CoverUrl":"string","DateAdded":"0001-01-01T00:00:00","PublisherName":"Penguin Random House","AuthorNames":["Stephen King"]}]
+2025-09-29 10:56:48.860 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WebAPI.Models.DTO.BookWithAuthorAndPublisherDTO, WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-29 10:56:48.862 +07:00 [INF] Executed action WebAPI.Controllers.BooksController.GetAll (WebAPI) in 182.5007ms
+2025-09-29 10:56:48.867 +07:00 [INF] Executed endpoint 'WebAPI.Controllers.BooksController.GetAll (WebAPI)'
+2025-09-29 10:56:48.869 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7021/api/Books/get-all-books?pageNumber=1&pageSize=100 - 200 null application/json; charset=utf-8 241.9477ms

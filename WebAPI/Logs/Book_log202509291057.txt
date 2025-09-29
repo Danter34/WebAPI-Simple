@@ -1,0 +1,31 @@
+2025-09-29 10:57:00.395 +07:00 [INF] Request starting HTTP/2 DELETE https://localhost:7021/api/Books/delete-book-by-id/8 - null null
+2025-09-29 10:57:00.401 +07:00 [INF] Executing endpoint 'WebAPI.Controllers.BooksController.DeleteBookById (WebAPI)'
+2025-09-29 10:57:00.404 +07:00 [INF] Route matched with {action = "DeleteBookById", controller = "Books"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteBookById(Int32) on controller WebAPI.Controllers.BooksController (WebAPI).
+2025-09-29 10:57:00.422 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[CoverUrl], [b].[DateAdded], [b].[DateRead], [b].[Description], [b].[Genre], [b].[IsRead], [b].[PublisherID], [b].[Rate], [b].[Title]
+FROM [Books] AS [b]
+WHERE [b].[Id] = @__id_0
+2025-09-29 10:57:00.476 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Books]
+OUTPUT 1
+WHERE [Id] = @p0;
+2025-09-29 10:57:00.482 +07:00 [INF] Executing OkObjectResult, writing value of type 'WebAPI.Models.Domain.Books'.
+2025-09-29 10:57:00.488 +07:00 [INF] Executed action WebAPI.Controllers.BooksController.DeleteBookById (WebAPI) in 81.0399ms
+2025-09-29 10:57:00.489 +07:00 [INF] Executed endpoint 'WebAPI.Controllers.BooksController.DeleteBookById (WebAPI)'
+2025-09-29 10:57:00.489 +07:00 [INF] Request finished HTTP/2 DELETE https://localhost:7021/api/Books/delete-book-by-id/8 - 200 null application/json; charset=utf-8 94.9945ms
+2025-09-29 10:57:28.669 +07:00 [INF] User profile is available. Using 'C:\Users\pc\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-29 10:57:28.918 +07:00 [INF] Now listening on: https://localhost:7021
+2025-09-29 10:57:28.920 +07:00 [INF] Now listening on: http://localhost:5176
+2025-09-29 10:57:28.922 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-29 10:57:28.923 +07:00 [INF] Hosting environment: Development
+2025-09-29 10:57:28.924 +07:00 [INF] Content root path: E:\LTWEB2\Thuchanh\WebAPI\WebAPI
+2025-09-29 10:57:29.388 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7021/swagger/index.html - null null
+2025-09-29 10:57:29.577 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7021/swagger/index.html - 200 null text/html;charset=utf-8 194.2622ms
+2025-09-29 10:57:29.580 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7021/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-29 10:57:29.588 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7021/_framework/aspnetcore-browser-refresh.js - 200 13748 application/javascript; charset=utf-8 7.4713ms
+2025-09-29 10:57:29.977 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7021/_vs/browserLink - null null
+2025-09-29 10:57:30.026 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7021/_vs/browserLink - 200 null text/javascript; charset=UTF-8 48.9624ms
+2025-09-29 10:57:30.744 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7021/swagger/v1/swagger.json - null null
+2025-09-29 10:57:30.865 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7021/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 122.2226ms

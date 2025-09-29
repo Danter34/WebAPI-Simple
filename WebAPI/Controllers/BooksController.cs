@@ -56,7 +56,8 @@ namespace WebAPI.Controllers
             return Ok(bookWithIdDTO);
         }
         [HttpPost("add-book")]
-        [Authorize(Roles ="Read,Write")]
+        [Authorize(Roles = "Read")]
+        [Authorize(Roles = "Write")]
         [ValidateModel]
         [ServiceFilter(typeof(ValidatePublisherExistsAttribute))]
         public IActionResult AddBook([FromBody] AddBookRequestDTO addBookRequestDTO)
@@ -70,7 +71,8 @@ namespace WebAPI.Controllers
         }
 
         [HttpPut("update-book-by-id/{id}")]
-        [Authorize(Roles ="Read,Write")]
+        [Authorize(Roles = "Read")]
+        [Authorize(Roles = "Write")]
         public IActionResult UpdateBookById(int id, [FromBody] AddBookRequestDTO bookDTO)
         {
             try
@@ -84,7 +86,8 @@ namespace WebAPI.Controllers
             }
         }
         [HttpDelete("delete-book-by-id/{id}")]
-        [Authorize(Roles ="Read,Write")]
+        [Authorize(Roles ="Read")]
+        [Authorize(Roles = "Write")]
         public IActionResult DeleteBookById(int id)
         {
             var deleteBook = _bookRepository.DeleteBookById(id);
