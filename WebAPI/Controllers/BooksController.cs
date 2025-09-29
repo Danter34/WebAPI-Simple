@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Text.Json;
 using WebAPI.CustomActionFilter;
 using WebAPI.Data;
 using WebAPI.Models.Domain;
@@ -20,12 +21,14 @@ namespace WebAPI.Controllers
         private readonly IPublisherRepository _publisherRepository;
         private const int MAX_BOOKS_PER_AUTHOR = 20;
         private const int MAX_BOOKS_PER_PUBLISHER_PER_YEAR = 100;
+        private readonly ILogger<BooksController> _logger;
 
-        public BooksController(AppDbContext dbContext, IBookRepository bookRepository, IPublisherRepository publisherRepository)
+        public BooksController(AppDbContext dbContext, IBookRepository bookRepository, IPublisherRepository publisherRepository, ILogger<BooksController> logger)
         {
             _dbContext = dbContext;
             _bookRepository = bookRepository;
             _publisherRepository = publisherRepository;
+            _logger = logger;
         }
 
         [HttpGet("get-all-books")]
@@ -34,8 +37,13 @@ namespace WebAPI.Controllers
             [FromQuery] string? sortBy, [FromQuery] bool isAscending,
             [FromQuery] int pageNumber = 1, [FromQuery] int pageSize = 100)
         {
+            _logger.LogInformation("GetAll Book Action method was invoked");
+            _logger.LogWarning("This is a warning log");
+            _logger.LogError("This is a error log");
             // su dung reposity pattern  
             var allBooks = _bookRepository.GetAllBooks(filterOn, filterQuery, sortBy,isAscending, pageNumber, pageSize);
+            //debug 
+            _logger.LogInformation($"Finished GetAllBook request with data { JsonSerializer.Serialize(allBooks)}"); 
             return Ok(allBooks);
         }
 
