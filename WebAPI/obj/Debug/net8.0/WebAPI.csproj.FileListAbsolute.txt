@@ -143,3 +143,9 @@ E:\LTWEB2\Thuchanh\WebAPI\WebAPI\obj\Debug\net8.0\refint\WebAPI.dll
 E:\LTWEB2\Thuchanh\WebAPI\WebAPI\obj\Debug\net8.0\WebAPI.pdb
 E:\LTWEB2\Thuchanh\WebAPI\WebAPI\obj\Debug\net8.0\WebAPI.genruntimeconfig.cache
 E:\LTWEB2\Thuchanh\WebAPI\WebAPI\obj\Debug\net8.0\ref\WebAPI.dll
+E:\LTWEB2\Thuchanh\WebAPI\WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\LTWEB2\Thuchanh\WebAPI\WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+E:\LTWEB2\Thuchanh\WebAPI\WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+E:\LTWEB2\Thuchanh\WebAPI\WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+E:\LTWEB2\Thuchanh\WebAPI\WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+E:\LTWEB2\Thuchanh\WebAPI\WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll

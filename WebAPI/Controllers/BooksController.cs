@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebAPI.CustomActionFilter;
@@ -28,6 +29,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet("get-all-books")]
+        [Authorize(Roles = "Read")]
         public IActionResult GetAll([FromQuery] string? filterOn, [FromQuery] string? filterQuery,
             [FromQuery] string? sortBy, [FromQuery] bool isAscending,
             [FromQuery] int pageNumber = 1, [FromQuery] int pageSize = 100)
@@ -39,12 +41,14 @@ namespace WebAPI.Controllers
 
         [HttpGet]
         [Route("get-book-by-id/{id}")]
+        [Authorize(Roles ="Read")]
         public IActionResult GetBookById([FromRoute] int id)
         {
             var bookWithIdDTO = _bookRepository.GetBookById(id);
             return Ok(bookWithIdDTO);
         }
         [HttpPost("add-book")]
+        [Authorize(Roles ="Read,Write")]
         [ValidateModel]
         [ServiceFilter(typeof(ValidatePublisherExistsAttribute))]
         public IActionResult AddBook([FromBody] AddBookRequestDTO addBookRequestDTO)
@@ -58,6 +62,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpPut("update-book-by-id/{id}")]
+        [Authorize(Roles ="Read,Write")]
         public IActionResult UpdateBookById(int id, [FromBody] AddBookRequestDTO bookDTO)
         {
             try
@@ -71,6 +76,7 @@ namespace WebAPI.Controllers
             }
         }
         [HttpDelete("delete-book-by-id/{id}")]
+        [Authorize(Roles ="Read,Write")]
         public IActionResult DeleteBookById(int id)
         {
             var deleteBook = _bookRepository.DeleteBookById(id);
