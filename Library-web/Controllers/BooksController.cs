@@ -22,7 +22,7 @@ namespace Library_web.Controllers
             try
             {
                 // Lấy dữ liệu books from API
-                var client = httpClientFactory.CreateClient();
+                var client = httpClientFactory.CreateClient("APIClient");
                 var httpResponseMess = await client.GetAsync($"https://localhost:7021/api/Books/get-all-books?filterOn={filterOn}&filterQuery={filterQuery}&sortBy={sortBy}&isAscending={isAscending}");
                 httpResponseMess.EnsureSuccessStatusCode();
                 response.AddRange(await httpResponseMess.Content.ReadFromJsonAsync<IEnumerable<BookDTO>>());
@@ -43,7 +43,7 @@ namespace Library_web.Controllers
         [HttpPost]
         public async Task<IActionResult> addBook(addBookDTO model)
         {
-            var client = httpClientFactory.CreateClient();
+            var client = httpClientFactory.CreateClient("APIClient");
 
             try
             {
@@ -72,7 +72,7 @@ namespace Library_web.Controllers
         }
         private async Task LoadLookupsAsync()
         {
-            var client = httpClientFactory.CreateClient();
+            var client = httpClientFactory.CreateClient("APIClient");
 
             var authors = await client.GetFromJsonAsync<IEnumerable<authorDTO>>(
                 "https://localhost:7021/api/Author/get-all-author") ?? Enumerable.Empty<authorDTO>();
@@ -88,7 +88,7 @@ namespace Library_web.Controllers
             BookDTO response = new();
             try
             {
-                var client = httpClientFactory.CreateClient();
+                var client = httpClientFactory.CreateClient("APIClient");
                 var httpResponseMess = await client.GetAsync($"https://localhost:7021/api/Books/get-book-by-id/{id}");
                 httpResponseMess.EnsureSuccessStatusCode();
 
@@ -105,7 +105,7 @@ namespace Library_web.Controllers
         [HttpGet]
         public async Task<IActionResult> editBook(int id)
         {
-            var client = httpClientFactory.CreateClient();
+            var client = httpClientFactory.CreateClient("APIClient");
 
             // 1) Lấy chi tiết sách
             var r1 = await client.GetAsync($"https://localhost:7021/api/Books/get-book-by-id/{id}");
@@ -139,7 +139,7 @@ namespace Library_web.Controllers
         {
             if (id != model.Id) model.Id = id;
 
-            var client = httpClientFactory.CreateClient();
+            var client = httpClientFactory.CreateClient("APIClient");
 
             var req = new HttpRequestMessage
             {
@@ -178,7 +178,7 @@ namespace Library_web.Controllers
             try
             {
                 // lấy dữ liệu books from API
-                var client = httpClientFactory.CreateClient();
+                var client = httpClientFactory.CreateClient("APIClient");
                 var httpResponseMess = await client.DeleteAsync("https://localhost:7021/api/Books/delete-book-by-id/" + id);
                 httpResponseMess.EnsureSuccessStatusCode();
                 return RedirectToAction("Index", "Books");

@@ -29,3 +29,11 @@ E:\LTWEB2\Thuchanh\WebAPI\Library-web\obj\Debug\net8.0\refint\Library-web.dll
 E:\LTWEB2\Thuchanh\WebAPI\Library-web\obj\Debug\net8.0\Library-web.pdb
 E:\LTWEB2\Thuchanh\WebAPI\Library-web\obj\Debug\net8.0\Library-web.genruntimeconfig.cache
 E:\LTWEB2\Thuchanh\WebAPI\Library-web\obj\Debug\net8.0\ref\Library-web.dll
+E:\LTWEB2\Thuchanh\WebAPI\Library-web\bin\Debug\net8.0\Newtonsoft.Json.dll
+E:\LTWEB2\Thuchanh\WebAPI\Library-web\obj\Debug\net8.0\Library-web.csproj.AssemblyReference.cache
+E:\LTWEB2\Thuchanh\WebAPI\Library-web\obj\Debug\net8.0\Library-.AC29190E.Up2Date
+E:\LTWEB2\Thuchanh\WebAPI\Library-web\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+E:\LTWEB2\Thuchanh\WebAPI\Library-web\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\LTWEB2\Thuchanh\WebAPI\Library-web\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+E:\LTWEB2\Thuchanh\WebAPI\Library-web\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+E:\LTWEB2\Thuchanh\WebAPI\Library-web\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll

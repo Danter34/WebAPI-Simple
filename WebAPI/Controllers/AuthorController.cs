@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WebAPI.CustomActionFilter;
 using WebAPI.Data;
@@ -22,6 +23,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet("get-all-author")]
+        [Authorize(Roles = "Read,Write")]
         public IActionResult GetAll()
         {
             var allAuthors = _authorRepository.GellAllAuthors();
@@ -30,12 +32,14 @@ namespace WebAPI.Controllers
 
         [HttpGet]
         [Route("get-author-by-id/{id}")]
+        [Authorize(Roles = "Read,Write")]
         public IActionResult GetAuthorById([FromRoute] int id)
         {
             var AuthorWithIdDTO = _authorRepository.GetAuthorById(id);
             return Ok(AuthorWithIdDTO);
         }
         [HttpPost("add-Author")]
+        [Authorize(Roles = "Write")]
         [ValidateModel]
         public IActionResult AddAuthor([FromBody] AddAuthorRequestDTO addauthorRequestDTO)
         {
@@ -49,12 +53,14 @@ namespace WebAPI.Controllers
         }
 
         [HttpPut("update-Author-by-id/{id}")]
+        [Authorize(Roles = "Write")]
         public IActionResult UpdateAuthorById(int id, [FromBody] AuthorNoIdDTO authorNoIdDTO)
         {
             var updateauthor = _authorRepository.UpdateAuthorById(id, authorNoIdDTO);
             return Ok(updateauthor);
         }
         [HttpDelete("delete-author-by-id/{id}")]
+        [Authorize(Roles = "Write")]
         //[ServiceFilter(typeof(ValidateAuthorCanDeleteAttribute))]
         public IActionResult DeleteAuthorById(int id)
         {

@@ -27,6 +27,12 @@
                         </li>
                     </ul>
                 </div>
+                @if (Context.Session.GetString("JwtToken") != null)
+                {
+                    <li class="nav-item">
+                        <a class="nav-link text-danger" asp-controller="User" asp-action="Logout">Logout</a>
+                    </li>
+                }
             </div>
         </nav>
     </header>

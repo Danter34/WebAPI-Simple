@@ -21,7 +21,7 @@ namespace Library_web.Controllers
             try
             {
                 // Lấy dữ liệu books from API
-                var client = httpClientFactory.CreateClient();
+                var client = httpClientFactory.CreateClient("APIClient");
                 var httpResponseMess = await client.GetAsync("https://localhost:7021/api/Publisher/get-all-publisher");
                 httpResponseMess.EnsureSuccessStatusCode();
                 response.AddRange(await httpResponseMess.Content.ReadFromJsonAsync<IEnumerable<publisherDTO>>());
@@ -40,7 +40,7 @@ namespace Library_web.Controllers
         [HttpPost]
         public async Task<IActionResult> addPublisher(publisherNoIdDTO model)
         {
-            var client = httpClientFactory.CreateClient();
+            var client = httpClientFactory.CreateClient("APIClient");
             try
             {
                 var req = new HttpRequestMessage
@@ -64,7 +64,7 @@ namespace Library_web.Controllers
         [HttpGet]
         public async Task<IActionResult> EditPublisher(int id)
         {
-            var client = httpClientFactory.CreateClient();
+            var client = httpClientFactory.CreateClient("APIClient");
             try
             {
                 var res = await client.GetAsync($"https://localhost:7021/api/Publisher/get-publisher-by-id/{id}");
@@ -84,7 +84,7 @@ namespace Library_web.Controllers
         {
             if (id != model.Id) model.Id = id;
 
-            var client = httpClientFactory.CreateClient();
+            var client = httpClientFactory.CreateClient("APIClient");
             try
             {
                 var req = new HttpRequestMessage
@@ -109,7 +109,7 @@ namespace Library_web.Controllers
         {
             try
             {
-                var client = httpClientFactory.CreateClient();
+                var client = httpClientFactory.CreateClient("APIClient");
                 var httpResponseMess = await client.DeleteAsync("https://localhost:7021/api/Publisher/delete-Publisher-by-id/" + id);
                 httpResponseMess.EnsureSuccessStatusCode();
                 return RedirectToAction("Index", "Publisher");

@@ -21,7 +21,7 @@ namespace Library_web.Controllers
             try
             {
                 // Lấy dữ liệu books from API
-                var client = httpClientFactory.CreateClient();
+                var client = httpClientFactory.CreateClient("APIClient");
                 var httpResponseMess = await client.GetAsync("https://localhost:7021/api/Author/get-all-author");
                 httpResponseMess.EnsureSuccessStatusCode();
                 response.AddRange(await httpResponseMess.Content.ReadFromJsonAsync<IEnumerable<authorDTO>>());
@@ -40,7 +40,7 @@ namespace Library_web.Controllers
         [HttpPost]
         public async Task<IActionResult> addAuthor(addAuthorDTO model)
         {
-            var client = httpClientFactory.CreateClient();
+            var client = httpClientFactory.CreateClient("APIClient");
             try
             {
                 var req = new HttpRequestMessage
@@ -64,7 +64,7 @@ namespace Library_web.Controllers
         [HttpGet]
         public async Task<IActionResult> EditAuthor(int id)
         {
-            var client = httpClientFactory.CreateClient();
+            var client = httpClientFactory.CreateClient("APIClient");
             try
             {
                 var res = await client.GetAsync($"https://localhost:7021/api/Author/get-author-by-id/{id}");
@@ -84,7 +84,7 @@ namespace Library_web.Controllers
         {
             if (id != model.Id) model.Id = id;
 
-            var client = httpClientFactory.CreateClient();
+            var client = httpClientFactory.CreateClient("APIClient");
             try
             {
                 var req = new HttpRequestMessage
@@ -110,7 +110,7 @@ namespace Library_web.Controllers
         {
             try
             {
-                var client = httpClientFactory.CreateClient();
+                var client = httpClientFactory.CreateClient("APIClient");
                 var httpResponseMess = await client.DeleteAsync("https://localhost:7021/api/Author/delete-author-by-id/" + id);
                 httpResponseMess.EnsureSuccessStatusCode();
                 return RedirectToAction("Index", "Author");

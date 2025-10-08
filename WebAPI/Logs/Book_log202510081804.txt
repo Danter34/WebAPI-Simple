@@ -1,0 +1,16 @@
+2025-10-08 18:04:24.726 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:7021/api/User/Login - application/json; charset=utf-8 52
+2025-10-08 18:04:25.697 +07:00 [INF] Executing endpoint 'WebAPI.Controllers.UserController.Login (WebAPI)'
+2025-10-08 18:04:25.720 +07:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(WebAPI.Models.DTO.LoginRequestDTO) on controller WebAPI.Controllers.UserController (WebAPI).
+2025-10-08 18:04:27.745 +07:00 [INF] Executed DbCommand (127ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-10-08 18:04:28.044 +07:00 [INF] Executed DbCommand (8ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-10-08 18:04:28.135 +07:00 [INF] Executing OkObjectResult, writing value of type 'WebAPI.Models.DTO.LoginResponseDTO'.
+2025-10-08 18:04:28.146 +07:00 [INF] Executed action WebAPI.Controllers.UserController.Login (WebAPI) in 2420.4993ms
+2025-10-08 18:04:28.148 +07:00 [INF] Executed endpoint 'WebAPI.Controllers.UserController.Login (WebAPI)'
+2025-10-08 18:04:28.155 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:7021/api/User/Login - 200 null application/json; charset=utf-8 3430.3873ms

@@ -1,5 +1,11 @@
 ﻿@model IEnumerable<Library_web.Models.DTO.BookDTO>
 
+@inject IHttpContextAccessor HttpContextAccessor
+@{
+    var rolesStr = HttpContextAccessor.HttpContext.Session.GetString("UserRoles");
+    var roles = rolesStr?.Split(',') ?? new string[0];
+    bool canWrite = roles.Contains("Write");
+}
 <h2>List all books</h2>
 <form asp-controller="Books" asp-action="Index" method="GET">
     <label>Tìm kiếm sách:</label>
@@ -26,7 +32,10 @@
     <input type="submit" value="Search" />
 </form>
 
-<a class="btn btn-primary" asp-controller="Books" asp-action="addBook">Add new book</a>
+@if (canWrite)
+{
+    <a class="btn btn-primary" asp-controller="Books" asp-action="addBook">Add new book</a>
+}
 <a class="btn btn-primary" asp-controller="Publisher" asp-action="index">List all Publisher</a>
 <a class="btn btn-primary" asp-controller="Author" asp-action="index">List all Author</a>
 
@@ -38,8 +47,13 @@
         <th>Publisher</th>
         <th>Rating</th>
         <th>Detail</th>
-        <th>Edit</th>
-        <th>Delete</th>
+        @if (canWrite)
+        {
+            <th>Edit</th>
+            <th>Delete</th>
+        }
+        
+       
     </tr>
 
     @foreach (var item in Model)
@@ -63,12 +77,15 @@
             <td>
                 <a asp-area="" asp-controller="Books" asp-action="listBook" asp-route-id="@item.Id">Detail</a>
             </td>
-            <td>
-                <a asp-area="" asp-controller="Books" asp-action="editBook" asp-route-id="@item.Id">Edit</a>
-            </td>
-            <td>
-                <a asp-area="" asp-controller="Books" asp-action="delBook" asp-route-id="@item.Id">Delete</a>
-            </td>
+            @if (canWrite)
+            {
+                <td>
+                    <a asp-controller="Books" asp-action="editBook" asp-route-id="@item.Id">Edit</a>
+                </td>
+                <td>
+                    <a asp-controller="Books" asp-action="delBook" asp-route-id="@item.Id">Delete</a>
+                </td>
+            }
         </tr>
     }
 </table>
