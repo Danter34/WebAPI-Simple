@@ -1,0 +1,48 @@
+2025-10-08 13:11:04.054 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7021/api/Books/get-book-by-id/1 - null null
+2025-10-08 13:11:04.059 +07:00 [INF] Executing endpoint 'WebAPI.Controllers.BooksController.GetBookById (WebAPI)'
+2025-10-08 13:11:04.062 +07:00 [INF] Route matched with {action = "GetBookById", controller = "Books"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetBookById(Int32) on controller WebAPI.Controllers.BooksController (WebAPI).
+2025-10-08 13:11:04.082 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Title], [t].[Description], [t].[IsRead], [t].[DateRead], [t].[Rate], [t].[Genre], [t].[CoverUrl], [t].[Name], [t].[Id0], [t0].[FullName], [t0].[Id], [t0].[Id0]
+FROM (
+    SELECT TOP(1) [b].[Id], [b].[Title], [b].[Description], [b].[IsRead], [b].[DateRead], [b].[Rate], [b].[Genre], [b].[CoverUrl], [p].[Name], [p].[Id] AS [Id0]
+    FROM [Books] AS [b]
+    INNER JOIN [Publishers] AS [p] ON [b].[PublisherID] = [p].[Id]
+    WHERE [b].[Id] = @__id_0
+) AS [t]
+LEFT JOIN (
+    SELECT [a].[FullName], [b0].[Id], [a].[Id] AS [Id0], [b0].[BookId]
+    FROM [Books_Authors] AS [b0]
+    INNER JOIN [Authors] AS [a] ON [b0].[AuthorId] = [a].[Id]
+) AS [t0] ON [t].[Id] = [t0].[BookId]
+ORDER BY [t].[Id], [t].[Id0], [t0].[Id]
+2025-10-08 13:11:04.085 +07:00 [INF] Executing OkObjectResult, writing value of type 'null'.
+2025-10-08 13:11:04.086 +07:00 [INF] Executed action WebAPI.Controllers.BooksController.GetBookById (WebAPI) in 22.5837ms
+2025-10-08 13:11:04.086 +07:00 [INF] Executed endpoint 'WebAPI.Controllers.BooksController.GetBookById (WebAPI)'
+2025-10-08 13:11:04.087 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7021/api/Books/get-book-by-id/1 - 204 null null 33.0463ms
+2025-10-08 13:11:19.803 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7021/api/Books/get-book-by-id/1 - null null
+2025-10-08 13:11:19.805 +07:00 [INF] Executing endpoint 'WebAPI.Controllers.BooksController.GetBookById (WebAPI)'
+2025-10-08 13:11:19.806 +07:00 [INF] Route matched with {action = "GetBookById", controller = "Books"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetBookById(Int32) on controller WebAPI.Controllers.BooksController (WebAPI).
+2025-10-08 13:11:19.815 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Title], [t].[Description], [t].[IsRead], [t].[DateRead], [t].[Rate], [t].[Genre], [t].[CoverUrl], [t].[Name], [t].[Id0], [t0].[FullName], [t0].[Id], [t0].[Id0]
+FROM (
+    SELECT TOP(1) [b].[Id], [b].[Title], [b].[Description], [b].[IsRead], [b].[DateRead], [b].[Rate], [b].[Genre], [b].[CoverUrl], [p].[Name], [p].[Id] AS [Id0]
+    FROM [Books] AS [b]
+    INNER JOIN [Publishers] AS [p] ON [b].[PublisherID] = [p].[Id]
+    WHERE [b].[Id] = @__id_0
+) AS [t]
+LEFT JOIN (
+    SELECT [a].[FullName], [b0].[Id], [a].[Id] AS [Id0], [b0].[BookId]
+    FROM [Books_Authors] AS [b0]
+    INNER JOIN [Authors] AS [a] ON [b0].[AuthorId] = [a].[Id]
+) AS [t0] ON [t].[Id] = [t0].[BookId]
+ORDER BY [t].[Id], [t].[Id0], [t0].[Id]
+2025-10-08 13:11:19.817 +07:00 [INF] Executing OkObjectResult, writing value of type 'null'.
+2025-10-08 13:11:19.818 +07:00 [INF] Executed action WebAPI.Controllers.BooksController.GetBookById (WebAPI) in 10.9649ms
+2025-10-08 13:11:19.819 +07:00 [INF] Executed endpoint 'WebAPI.Controllers.BooksController.GetBookById (WebAPI)'
+2025-10-08 13:11:19.820 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7021/api/Books/get-book-by-id/1 - 204 null null 16.8689ms
+2025-10-08 13:11:59.215 +07:00 [INF] User profile is available. Using 'C:\Users\pc\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-08 13:11:59.578 +07:00 [INF] Now listening on: https://localhost:7021
+2025-10-08 13:11:59.580 +07:00 [INF] Now listening on: http://localhost:5176
+2025-10-08 13:11:59.584 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-08 13:11:59.586 +07:00 [INF] Hosting environment: Development
+2025-10-08 13:11:59.587 +07:00 [INF] Content root path: E:\LTWEB2\Thuchanh\WebAPI\WebAPI

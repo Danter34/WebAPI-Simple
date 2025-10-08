@@ -68,7 +68,9 @@ builder.Services.AddScoped<IBook_AuthorRepository, SQLBook_Author>();
 builder.Services.AddScoped<ValidatePublisherExistsAttribute>();
 builder.Services.AddScoped<ValidateBookAuthorNotExistsAttribute>();
 builder.Services.AddScoped<ValidateAuthorCanDeleteAttribute>();
+builder.Services.AddScoped<IImageRepository, LocalImageRepository>();
 builder.Services.AddScoped<ITokenRepository, TokenRepository>();
+builder.Services.AddHttpContextAccessor();
 // config identity user 
 builder.Services.AddIdentityCore<IdentityUser>()
     .AddRoles<IdentityRole>()

@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Library_web.Models.DTO.publisherDTO>
+
+<h2>List all Publisher</h2>
+
+<a class="btn btn-primary" asp-controller="Publisher" asp-action="addPublisher">Add new Publisher</a>
+
+<a class="btn btn-primary" asp-controller="Books" asp-action="index">List all Book</a>
+<a class="btn btn-primary" asp-controller="Author" asp-action="index">List all Author</a>
+
+<table class="table">
+    <tr>
+        <th>Id code</th>
+        <th>Publisher Name</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+            <td>
+                <a asp-area="" asp-controller="Publisher" asp-action="EditPublisher" asp-route-id="@item.Id">Edit</a>
+            </td>
+            <td>
+                <a asp-area="" asp-controller="Publisher" asp-action="delPublisher" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+    }
+</table>

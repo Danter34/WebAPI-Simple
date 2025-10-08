@@ -1,0 +1,42 @@
+﻿@model Library_web.Models.DTO.addBookDTO
+@using Microsoft.AspNetCore.Mvc.Rendering
+@{
+    var publishers = (IEnumerable<SelectListItem>)(ViewBag.Publishers ?? new List<SelectListItem>());
+    var authors = (IEnumerable<SelectListItem>)(ViewBag.Authors ?? new List<SelectListItem>());
+}
+
+<form asp-controller="Books" asp-action="addBook" method="POST">
+    <label>Title</label><br />
+    <input asp-for="title" class="form-control" />
+    <span asp-validation-for="title" class="text-danger"></span><br />
+
+    <label>Description</label><br />
+    <input asp-for="description" class="form-control" /><br />
+
+    <label>IsRead</label><br />
+    <input type="radio" asp-for="isRead" value="true" /> Yes
+    <input type="radio" asp-for="isRead" value="false" /> No
+    <br />
+
+    <label>DateRead</label>
+    <input asp-for="dateRead" type="date" class="form-control" /><br />
+
+    <label>Rate</label>
+    <input asp-for="rate" type="number" class="form-control" /><br />
+
+    <label>Genre</label>
+    <input asp-for="genre" class="form-control" /><br />
+
+    <label>Cover Url</label>
+    <input asp-for="coverUrl" class="form-control" /><br />
+
+    <label>Publisher</label>
+    <select asp-for="PublisherId" asp-items="publishers" class="form-control">
+        <option value="">-- chọn NXB --</option>
+    </select><br />
+
+    <label>Author</label>
+    <select asp-for="AuthorIds" asp-items="authors" multiple class="form-control"></select><br />
+
+    <input type="submit" value="Save" class="btn btn-primary" />
+</form>

@@ -1,0 +1,6 @@
+﻿@model Library_web.Models.DTO.authorDTO
+<form asp-controller="Author" asp-action="EditAuthor" method="POST">
+    <label>Name</label>
+    <input asp-for="FullName" />
+    <button type="submit">Save</button>
+</form>

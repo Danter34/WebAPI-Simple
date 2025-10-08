@@ -55,7 +55,7 @@ namespace WebAPI.Controllers
             return Ok(updateauthor);
         }
         [HttpDelete("delete-author-by-id/{id}")]
-        [ServiceFilter(typeof(ValidateAuthorCanDeleteAttribute))]
+        //[ServiceFilter(typeof(ValidateAuthorCanDeleteAttribute))]
         public IActionResult DeleteAuthorById(int id)
         {
             if (ValidateDeleteAuthor(id))

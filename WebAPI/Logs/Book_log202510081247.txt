@@ -1,0 +1,48 @@
+2025-10-08 12:47:56.152 +07:00 [INF] User profile is available. Using 'C:\Users\pc\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-08 12:47:56.286 +07:00 [INF] Now listening on: https://localhost:7021
+2025-10-08 12:47:56.288 +07:00 [INF] Now listening on: http://localhost:5176
+2025-10-08 12:47:56.291 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-08 12:47:56.292 +07:00 [INF] Hosting environment: Development
+2025-10-08 12:47:56.292 +07:00 [INF] Content root path: E:\LTWEB2\Thuchanh\WebAPI\WebAPI
+2025-10-08 12:47:56.511 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7021/api/Books/get-all-books?filterOn=&filterQuery=&sortBy=&isAscending=True - null null
+2025-10-08 12:47:56.553 +07:00 [INF] Executing endpoint 'WebAPI.Controllers.BooksController.GetAll (WebAPI)'
+2025-10-08 12:47:56.569 +07:00 [INF] Route matched with {action = "GetAll", controller = "Books"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll(System.String, System.String, System.String, Boolean, Int32, Int32) on controller WebAPI.Controllers.BooksController (WebAPI).
+2025-10-08 12:47:56.644 +07:00 [INF] GetAll Book Action method was invoked
+2025-10-08 12:47:56.645 +07:00 [WRN] This is a warning log
+2025-10-08 12:47:56.646 +07:00 [ERR] This is a error log
+2025-10-08 12:47:56.759 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7021/swagger/index.html - null null
+2025-10-08 12:47:56.888 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7021/swagger/index.html - 200 null text/html;charset=utf-8 128.921ms
+2025-10-08 12:47:56.893 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7021/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-08 12:47:56.893 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7021/_vs/browserLink - null null
+2025-10-08 12:47:56.899 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7021/_framework/aspnetcore-browser-refresh.js - 200 13748 application/javascript; charset=utf-8 5.8802ms
+2025-10-08 12:47:56.921 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7021/_vs/browserLink - 200 null text/javascript; charset=UTF-8 27.9352ms
+2025-10-08 12:47:56.980 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7021/swagger/v1/swagger.json - null null
+2025-10-08 12:47:57.082 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7021/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 101.8869ms
+2025-10-08 12:47:57.204 +07:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2025-10-08 12:47:57.205 +07:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2025-10-08 12:47:57.442 +07:00 [INF] Executed DbCommand (15ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Title], [t].[Description], [t].[IsRead], CASE
+    WHEN [t].[IsRead] = CAST(1 AS bit) THEN [t].[DateRead]
+    ELSE NULL
+END, CASE
+    WHEN [t].[IsRead] = CAST(1 AS bit) THEN [t].[Rate]
+    ELSE NULL
+END, [t].[Genre], [t].[CoverUrl], [p].[Name], [p].[Id], [t0].[FullName], [t0].[Id], [t0].[Id0]
+FROM (
+    SELECT [b].[Id], [b].[CoverUrl], [b].[DateRead], [b].[Description], [b].[Genre], [b].[IsRead], [b].[PublisherID], [b].[Rate], [b].[Title]
+    FROM [Books] AS [b]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [Publishers] AS [p] ON [t].[PublisherID] = [p].[Id]
+LEFT JOIN (
+    SELECT [a].[FullName], [b0].[Id], [a].[Id] AS [Id0], [b0].[BookId]
+    FROM [Books_Authors] AS [b0]
+    INNER JOIN [Authors] AS [a] ON [b0].[AuthorId] = [a].[Id]
+) AS [t0] ON [t].[Id] = [t0].[BookId]
+ORDER BY [t].[Id], [p].[Id], [t0].[Id]
+2025-10-08 12:47:57.468 +07:00 [INF] Finished GetAllBook request with data [{"Id":5,"Title":"stringstri","Description":"string","IsRead":true,"DateRead":"2025-10-08T01:47:47","Rate":0,"Genre":"string","CoverUrl":"string","DateAdded":"0001-01-01T00:00:00","PublisherName":"HarperCollins","AuthorNames":["J.K. Rowling"]},{"Id":6,"Title":"stringstri","Description":"string","IsRead":true,"DateRead":"2025-09-25T05:57:39.662","Rate":2,"Genre":"string","CoverUrl":"string","DateAdded":"0001-01-01T00:00:00","PublisherName":"Penguin Random House","AuthorNames":["Stephen King"]},{"Id":7,"Title":"stringstri","Description":"string","IsRead":true,"DateRead":"2025-09-25T06:02:58","Rate":1,"Genre":"string","CoverUrl":"string","DateAdded":"0001-01-01T00:00:00","PublisherName":"Simon \u0026 Schuster","AuthorNames":["George R.R. Martin"]},{"Id":9,"Title":"em chua 18 anh oi","Description":"string","IsRead":true,"DateRead":"2025-10-07T08:52:36.836","Rate":4,"Genre":"string","CoverUrl":"string","DateAdded":"0001-01-01T00:00:00","PublisherName":"Penguin Random House","AuthorNames":["J.K. Rowling"]},{"Id":10,"Title":"stringstri","Description":"string","IsRead":true,"DateRead":"2025-10-08T00:51:41","Rate":0,"Genre":"string","CoverUrl":"https://nads.1cdn.vn/2024/11/22/74da3f39-759b-4f08-8850-4c8f2937e81a-1_mangeshdes.png","DateAdded":"0001-01-01T00:00:00","PublisherName":"Penguin Random House","AuthorNames":["Agatha Christie"]},{"Id":11,"Title":"dewfewgfwergrg","Description":"h\u1ECFi l\u00E0m cc g\u00EC","IsRead":true,"DateRead":"2025-10-01T00:00:00","Rate":3,"Genre":"kinh d\u1ECB","CoverUrl":"xsacdscfedsvcfeds","DateAdded":"0001-01-01T00:00:00","PublisherName":"HarperCollins","AuthorNames":["Stephen King"]}]
+2025-10-08 12:47:57.475 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WebAPI.Models.DTO.BookWithAuthorAndPublisherDTO, WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-08 12:47:57.483 +07:00 [INF] Executed action WebAPI.Controllers.BooksController.GetAll (WebAPI) in 909.42ms
+2025-10-08 12:47:57.484 +07:00 [INF] Executed endpoint 'WebAPI.Controllers.BooksController.GetAll (WebAPI)'
+2025-10-08 12:47:57.488 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7021/api/Books/get-all-books?filterOn=&filterQuery=&sortBy=&isAscending=True - 200 null application/json; charset=utf-8 979.2764ms

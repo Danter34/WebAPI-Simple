@@ -28,5 +28,6 @@ namespace WebAPI.Data
         public DbSet<Authors> Authors { get; set; }
         public DbSet<Book_Authors> Books_Authors { get; set; }
         public DbSet<Publishers> Publishers { get; set; }
+        public DbSet<Image> Images { get; set; }
     }
 }

@@ -1,0 +1,208 @@
+2025-10-08 13:34:00.121 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7021/api/Books/get-all-books?filterOn=&filterQuery=&sortBy=&isAscending=True - null null
+2025-10-08 13:34:00.268 +07:00 [INF] Executing endpoint 'WebAPI.Controllers.BooksController.GetAll (WebAPI)'
+2025-10-08 13:34:00.319 +07:00 [INF] Route matched with {action = "GetAll", controller = "Books"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll(System.String, System.String, System.String, Boolean, Int32, Int32) on controller WebAPI.Controllers.BooksController (WebAPI).
+2025-10-08 13:34:00.368 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7021/swagger/index.html - null null
+2025-10-08 13:34:00.579 +07:00 [INF] GetAll Book Action method was invoked
+2025-10-08 13:34:00.581 +07:00 [WRN] This is a warning log
+2025-10-08 13:34:00.582 +07:00 [ERR] This is a error log
+2025-10-08 13:34:00.720 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7021/swagger/index.html - 200 null text/html;charset=utf-8 351.1586ms
+2025-10-08 13:34:00.727 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7021/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-08 13:34:00.727 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7021/_vs/browserLink - null null
+2025-10-08 13:34:00.742 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7021/_framework/aspnetcore-browser-refresh.js - 200 13748 application/javascript; charset=utf-8 15.5453ms
+2025-10-08 13:34:00.802 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7021/_vs/browserLink - 200 null text/javascript; charset=UTF-8 75.3314ms
+2025-10-08 13:34:00.870 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7021/swagger/v1/swagger.json - null null
+2025-10-08 13:34:01.008 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7021/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 137.9169ms
+2025-10-08 13:34:01.376 +07:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2025-10-08 13:34:01.378 +07:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2025-10-08 13:34:01.797 +07:00 [INF] Executed DbCommand (33ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Title], [t].[Description], [t].[IsRead], CASE
+    WHEN [t].[IsRead] = CAST(1 AS bit) THEN [t].[DateRead]
+    ELSE NULL
+END, CASE
+    WHEN [t].[IsRead] = CAST(1 AS bit) THEN [t].[Rate]
+    ELSE NULL
+END, [t].[Genre], [t].[CoverUrl], [p].[Name], [p].[Id], [t0].[FullName], [t0].[Id], [t0].[Id0]
+FROM (
+    SELECT [b].[Id], [b].[CoverUrl], [b].[DateRead], [b].[Description], [b].[Genre], [b].[IsRead], [b].[PublisherID], [b].[Rate], [b].[Title]
+    FROM [Books] AS [b]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [Publishers] AS [p] ON [t].[PublisherID] = [p].[Id]
+LEFT JOIN (
+    SELECT [a].[FullName], [b0].[Id], [a].[Id] AS [Id0], [b0].[BookId]
+    FROM [Books_Authors] AS [b0]
+    INNER JOIN [Authors] AS [a] ON [b0].[AuthorId] = [a].[Id]
+) AS [t0] ON [t].[Id] = [t0].[BookId]
+ORDER BY [t].[Id], [p].[Id], [t0].[Id]
+2025-10-08 13:34:01.839 +07:00 [INF] Finished GetAllBook request with data [{"Id":6,"Title":"stringstri","Description":"string","IsRead":true,"DateRead":"2025-09-25T05:57:39.662","Rate":2,"Genre":"string","CoverUrl":"string","DateAdded":"0001-01-01T00:00:00","PublisherName":"Penguin Random House","AuthorNames":["Stephen King"]},{"Id":7,"Title":"stringstri","Description":"string","IsRead":true,"DateRead":"2025-09-25T06:02:58","Rate":1,"Genre":"string","CoverUrl":"string","DateAdded":"0001-01-01T00:00:00","PublisherName":"Simon \u0026 Schuster","AuthorNames":["George R.R. Martin"]},{"Id":9,"Title":"em chua 18 anh oi","Description":"string","IsRead":true,"DateRead":"2025-10-07T08:52:36.836","Rate":4,"Genre":"string","CoverUrl":"string","DateAdded":"0001-01-01T00:00:00","PublisherName":"Penguin Random House","AuthorNames":["J.K. Rowling"]},{"Id":10,"Title":"stringstri","Description":"string","IsRead":true,"DateRead":"2025-10-08T00:51:41","Rate":0,"Genre":"string","CoverUrl":"https://nads.1cdn.vn/2024/11/22/74da3f39-759b-4f08-8850-4c8f2937e81a-1_mangeshdes.png","DateAdded":"0001-01-01T00:00:00","PublisherName":"Penguin Random House","AuthorNames":["Agatha Christie"]},{"Id":11,"Title":"dewfewgfwergrg","Description":"h\u1ECFi l\u00E0m cc g\u00EC","IsRead":true,"DateRead":"2025-10-01T00:00:00","Rate":3,"Genre":"kinh d\u1ECB","CoverUrl":"xsacdscfedsvcfeds","DateAdded":"0001-01-01T00:00:00","PublisherName":"HarperCollins","AuthorNames":["Stephen King"]},{"Id":12,"Title":"fuyfcyiufuyf","Description":"h\u1ECFi l\u00E0m cc g\u00EC","IsRead":true,"DateRead":"2025-10-01T00:00:00","Rate":4,"Genre":"kinh d\u1ECB","CoverUrl":"https://i.pinimg.com/564x/72/f4/32/72f432c765e6df59daaf6aeff3ee4e9e.jpg","DateAdded":"0001-01-01T00:00:00","PublisherName":"Hachette Livre","AuthorNames":["George R.R. Martin"]}]
+2025-10-08 13:34:01.848 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WebAPI.Models.DTO.BookWithAuthorAndPublisherDTO, WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-08 13:34:01.861 +07:00 [INF] Executed action WebAPI.Controllers.BooksController.GetAll (WebAPI) in 1535.3614ms
+2025-10-08 13:34:01.861 +07:00 [INF] Executed endpoint 'WebAPI.Controllers.BooksController.GetAll (WebAPI)'
+2025-10-08 13:34:01.869 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7021/api/Books/get-all-books?filterOn=&filterQuery=&sortBy=&isAscending=True - 200 null application/json; charset=utf-8 1759.7835ms
+2025-10-08 13:34:05.172 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7021/api/Publisher/get-all-publisher - null null
+2025-10-08 13:34:05.177 +07:00 [INF] Executing endpoint 'WebAPI.Controllers.PublisherController.GetAll (WebAPI)'
+2025-10-08 13:34:05.180 +07:00 [INF] Route matched with {action = "GetAll", controller = "Publisher"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller WebAPI.Controllers.PublisherController (WebAPI).
+2025-10-08 13:34:05.201 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name]
+FROM [Publishers] AS [p]
+2025-10-08 13:34:05.205 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WebAPI.Models.DTO.PublisherDTO, WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-08 13:34:05.208 +07:00 [INF] Executed action WebAPI.Controllers.PublisherController.GetAll (WebAPI) in 27.1448ms
+2025-10-08 13:34:05.210 +07:00 [INF] Executed endpoint 'WebAPI.Controllers.PublisherController.GetAll (WebAPI)'
+2025-10-08 13:34:05.211 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7021/api/Publisher/get-all-publisher - 200 null application/json; charset=utf-8 39.2063ms
+2025-10-08 13:34:06.316 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7021/api/Author/get-all-author - null null
+2025-10-08 13:34:06.320 +07:00 [INF] Executing endpoint 'WebAPI.Controllers.AuthorController.GetAll (WebAPI)'
+2025-10-08 13:34:06.322 +07:00 [INF] Route matched with {action = "GetAll", controller = "Author"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller WebAPI.Controllers.AuthorController (WebAPI).
+2025-10-08 13:34:06.372 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[FullName]
+FROM [Authors] AS [a]
+2025-10-08 13:34:06.374 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WebAPI.Models.DTO.AuthorDTO, WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-08 13:34:06.376 +07:00 [INF] Executed action WebAPI.Controllers.AuthorController.GetAll (WebAPI) in 53.2695ms
+2025-10-08 13:34:06.377 +07:00 [INF] Executed endpoint 'WebAPI.Controllers.AuthorController.GetAll (WebAPI)'
+2025-10-08 13:34:06.379 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7021/api/Author/get-all-author - 200 null application/json; charset=utf-8 62.9114ms
+2025-10-08 13:34:14.194 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:7021/api/Author/add-Author - application/json; charset=utf-8 27
+2025-10-08 13:34:14.197 +07:00 [INF] Executing endpoint 'WebAPI.Controllers.AuthorController.AddAuthor (WebAPI)'
+2025-10-08 13:34:14.199 +07:00 [INF] Route matched with {action = "AddAuthor", controller = "Author"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddAuthor(WebAPI.Models.DTO.AddAuthorRequestDTO) on controller WebAPI.Controllers.AuthorController (WebAPI).
+2025-10-08 13:34:14.320 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Authors] ([FullName])
+OUTPUT INSERTED.[Id]
+VALUES (@p0);
+2025-10-08 13:34:14.336 +07:00 [INF] Executing OkObjectResult, writing value of type 'WebAPI.Models.DTO.AddAuthorRequestDTO'.
+2025-10-08 13:34:14.338 +07:00 [INF] Executed action WebAPI.Controllers.AuthorController.AddAuthor (WebAPI) in 137.9432ms
+2025-10-08 13:34:14.339 +07:00 [INF] Executed endpoint 'WebAPI.Controllers.AuthorController.AddAuthor (WebAPI)'
+2025-10-08 13:34:14.340 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:7021/api/Author/add-Author - 200 null application/json; charset=utf-8 146.0877ms
+2025-10-08 13:34:14.353 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7021/api/Author/get-all-author - null null
+2025-10-08 13:34:14.356 +07:00 [INF] Executing endpoint 'WebAPI.Controllers.AuthorController.GetAll (WebAPI)'
+2025-10-08 13:34:14.357 +07:00 [INF] Route matched with {action = "GetAll", controller = "Author"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller WebAPI.Controllers.AuthorController (WebAPI).
+2025-10-08 13:34:14.366 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[FullName]
+FROM [Authors] AS [a]
+2025-10-08 13:34:14.367 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WebAPI.Models.DTO.AuthorDTO, WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-08 13:34:14.368 +07:00 [INF] Executed action WebAPI.Controllers.AuthorController.GetAll (WebAPI) in 9.7642ms
+2025-10-08 13:34:14.369 +07:00 [INF] Executed endpoint 'WebAPI.Controllers.AuthorController.GetAll (WebAPI)'
+2025-10-08 13:34:14.371 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7021/api/Author/get-all-author - 200 null application/json; charset=utf-8 17.2797ms
+2025-10-08 13:34:15.736 +07:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:7021/api/Author/delete-author-by-id/9 - null null
+2025-10-08 13:34:15.738 +07:00 [INF] Executing endpoint 'WebAPI.Controllers.AuthorController.DeleteAuthorById (WebAPI)'
+2025-10-08 13:34:15.740 +07:00 [INF] Route matched with {action = "DeleteAuthorById", controller = "Author"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteAuthorById(Int32) on controller WebAPI.Controllers.AuthorController (WebAPI).
+2025-10-08 13:34:15.768 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[FullName]
+FROM [Authors] AS [a]
+WHERE [a].[Id] = @__id_0
+2025-10-08 13:34:15.784 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Books_Authors] AS [b]
+        WHERE [b].[AuthorId] = @__id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-10-08 13:34:15.792 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[FullName]
+FROM [Authors] AS [a]
+WHERE [a].[Id] = @__id_0
+2025-10-08 13:34:15.805 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Authors]
+OUTPUT 1
+WHERE [Id] = @p0;
+2025-10-08 13:34:15.809 +07:00 [INF] Executing OkObjectResult, writing value of type 'null'.
+2025-10-08 13:34:15.810 +07:00 [INF] Executed action WebAPI.Controllers.AuthorController.DeleteAuthorById (WebAPI) in 68.1516ms
+2025-10-08 13:34:15.810 +07:00 [INF] Executed endpoint 'WebAPI.Controllers.AuthorController.DeleteAuthorById (WebAPI)'
+2025-10-08 13:34:15.811 +07:00 [INF] Request finished HTTP/1.1 DELETE https://localhost:7021/api/Author/delete-author-by-id/9 - 204 null null 75.1819ms
+2025-10-08 13:34:15.825 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7021/api/Author/get-all-author - null null
+2025-10-08 13:34:15.827 +07:00 [INF] Executing endpoint 'WebAPI.Controllers.AuthorController.GetAll (WebAPI)'
+2025-10-08 13:34:15.828 +07:00 [INF] Route matched with {action = "GetAll", controller = "Author"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller WebAPI.Controllers.AuthorController (WebAPI).
+2025-10-08 13:34:15.832 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[FullName]
+FROM [Authors] AS [a]
+2025-10-08 13:34:15.834 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WebAPI.Models.DTO.AuthorDTO, WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-08 13:34:15.835 +07:00 [INF] Executed action WebAPI.Controllers.AuthorController.GetAll (WebAPI) in 5.8669ms
+2025-10-08 13:34:15.836 +07:00 [INF] Executed endpoint 'WebAPI.Controllers.AuthorController.GetAll (WebAPI)'
+2025-10-08 13:34:15.837 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7021/api/Author/get-all-author - 200 null application/json; charset=utf-8 12.1365ms
+2025-10-08 13:34:17.846 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7021/api/Publisher/get-all-publisher - null null
+2025-10-08 13:34:17.851 +07:00 [INF] Executing endpoint 'WebAPI.Controllers.PublisherController.GetAll (WebAPI)'
+2025-10-08 13:34:17.852 +07:00 [INF] Route matched with {action = "GetAll", controller = "Publisher"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller WebAPI.Controllers.PublisherController (WebAPI).
+2025-10-08 13:34:17.859 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name]
+FROM [Publishers] AS [p]
+2025-10-08 13:34:17.861 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WebAPI.Models.DTO.PublisherDTO, WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-08 13:34:17.862 +07:00 [INF] Executed action WebAPI.Controllers.PublisherController.GetAll (WebAPI) in 8.5228ms
+2025-10-08 13:34:17.863 +07:00 [INF] Executed endpoint 'WebAPI.Controllers.PublisherController.GetAll (WebAPI)'
+2025-10-08 13:34:17.864 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7021/api/Publisher/get-all-publisher - 200 null application/json; charset=utf-8 17.8259ms
+2025-10-08 13:34:22.549 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:7021/api/Publisher/add-Publisher - application/json; charset=utf-8 20
+2025-10-08 13:34:22.551 +07:00 [INF] Executing endpoint 'WebAPI.Controllers.PublisherController.AddPublisher (WebAPI)'
+2025-10-08 13:34:22.552 +07:00 [INF] Route matched with {action = "AddPublisher", controller = "Publisher"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddPublisher(WebAPI.Models.DTO.AddPublisherRequestDTO) on controller WebAPI.Controllers.PublisherController (WebAPI).
+2025-10-08 13:34:22.572 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ToLower_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Publishers] AS [p]
+        WHERE LOWER([p].[Name]) = @__ToLower_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-10-08 13:34:22.585 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Publishers] ([Name])
+OUTPUT INSERTED.[Id]
+VALUES (@p0);
+2025-10-08 13:34:22.588 +07:00 [INF] Executing OkObjectResult, writing value of type 'WebAPI.Models.DTO.AddPublisherRequestDTO'.
+2025-10-08 13:34:22.589 +07:00 [INF] Executed action WebAPI.Controllers.PublisherController.AddPublisher (WebAPI) in 35.3771ms
+2025-10-08 13:34:22.590 +07:00 [INF] Executed endpoint 'WebAPI.Controllers.PublisherController.AddPublisher (WebAPI)'
+2025-10-08 13:34:22.591 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:7021/api/Publisher/add-Publisher - 200 null application/json; charset=utf-8 42.2651ms
+2025-10-08 13:34:22.602 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7021/api/Publisher/get-all-publisher - null null
+2025-10-08 13:34:22.604 +07:00 [INF] Executing endpoint 'WebAPI.Controllers.PublisherController.GetAll (WebAPI)'
+2025-10-08 13:34:22.605 +07:00 [INF] Route matched with {action = "GetAll", controller = "Publisher"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller WebAPI.Controllers.PublisherController (WebAPI).
+2025-10-08 13:34:22.611 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name]
+FROM [Publishers] AS [p]
+2025-10-08 13:34:22.613 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WebAPI.Models.DTO.PublisherDTO, WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-08 13:34:22.614 +07:00 [INF] Executed action WebAPI.Controllers.PublisherController.GetAll (WebAPI) in 7.5041ms
+2025-10-08 13:34:22.615 +07:00 [INF] Executed endpoint 'WebAPI.Controllers.PublisherController.GetAll (WebAPI)'
+2025-10-08 13:34:22.615 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7021/api/Publisher/get-all-publisher - 200 null application/json; charset=utf-8 13.415ms
+2025-10-08 13:34:24.826 +07:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:7021/api/Books/delete-book-by-id/8 - null null
+2025-10-08 13:34:24.828 +07:00 [INF] Executing endpoint 'WebAPI.Controllers.BooksController.DeleteBookById (WebAPI)'
+2025-10-08 13:34:24.830 +07:00 [INF] Route matched with {action = "DeleteBookById", controller = "Books"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteBookById(Int32) on controller WebAPI.Controllers.BooksController (WebAPI).
+2025-10-08 13:34:24.841 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[CoverUrl], [b].[DateAdded], [b].[DateRead], [b].[Description], [b].[Genre], [b].[IsRead], [b].[PublisherID], [b].[Rate], [b].[Title]
+FROM [Books] AS [b]
+WHERE [b].[Id] = @__id_0
+2025-10-08 13:34:24.843 +07:00 [INF] Executing OkObjectResult, writing value of type 'null'.
+2025-10-08 13:34:24.844 +07:00 [INF] Executed action WebAPI.Controllers.BooksController.DeleteBookById (WebAPI) in 12.5819ms
+2025-10-08 13:34:24.845 +07:00 [INF] Executed endpoint 'WebAPI.Controllers.BooksController.DeleteBookById (WebAPI)'
+2025-10-08 13:34:24.846 +07:00 [INF] Request finished HTTP/1.1 DELETE https://localhost:7021/api/Books/delete-book-by-id/8 - 204 null null 20.9745ms
+2025-10-08 13:34:24.861 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7021/api/Books/get-all-books?filterOn=&filterQuery=&sortBy=&isAscending=True - null null
+2025-10-08 13:34:24.863 +07:00 [INF] Executing endpoint 'WebAPI.Controllers.BooksController.GetAll (WebAPI)'
+2025-10-08 13:34:24.864 +07:00 [INF] Route matched with {action = "GetAll", controller = "Books"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll(System.String, System.String, System.String, Boolean, Int32, Int32) on controller WebAPI.Controllers.BooksController (WebAPI).
+2025-10-08 13:34:24.866 +07:00 [INF] GetAll Book Action method was invoked
+2025-10-08 13:34:24.866 +07:00 [WRN] This is a warning log
+2025-10-08 13:34:24.867 +07:00 [ERR] This is a error log
+2025-10-08 13:34:24.872 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Title], [t].[Description], [t].[IsRead], CASE
+    WHEN [t].[IsRead] = CAST(1 AS bit) THEN [t].[DateRead]
+    ELSE NULL
+END, CASE
+    WHEN [t].[IsRead] = CAST(1 AS bit) THEN [t].[Rate]
+    ELSE NULL
+END, [t].[Genre], [t].[CoverUrl], [p].[Name], [p].[Id], [t0].[FullName], [t0].[Id], [t0].[Id0]
+FROM (
+    SELECT [b].[Id], [b].[CoverUrl], [b].[DateRead], [b].[Description], [b].[Genre], [b].[IsRead], [b].[PublisherID], [b].[Rate], [b].[Title]
+    FROM [Books] AS [b]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [Publishers] AS [p] ON [t].[PublisherID] = [p].[Id]
+LEFT JOIN (
+    SELECT [a].[FullName], [b0].[Id], [a].[Id] AS [Id0], [b0].[BookId]
+    FROM [Books_Authors] AS [b0]
+    INNER JOIN [Authors] AS [a] ON [b0].[AuthorId] = [a].[Id]
+) AS [t0] ON [t].[Id] = [t0].[BookId]
+ORDER BY [t].[Id], [p].[Id], [t0].[Id]
+2025-10-08 13:34:24.874 +07:00 [INF] Finished GetAllBook request with data [{"Id":6,"Title":"stringstri","Description":"string","IsRead":true,"DateRead":"2025-09-25T05:57:39.662","Rate":2,"Genre":"string","CoverUrl":"string","DateAdded":"0001-01-01T00:00:00","PublisherName":"Penguin Random House","AuthorNames":["Stephen King"]},{"Id":7,"Title":"stringstri","Description":"string","IsRead":true,"DateRead":"2025-09-25T06:02:58","Rate":1,"Genre":"string","CoverUrl":"string","DateAdded":"0001-01-01T00:00:00","PublisherName":"Simon \u0026 Schuster","AuthorNames":["George R.R. Martin"]},{"Id":9,"Title":"em chua 18 anh oi","Description":"string","IsRead":true,"DateRead":"2025-10-07T08:52:36.836","Rate":4,"Genre":"string","CoverUrl":"string","DateAdded":"0001-01-01T00:00:00","PublisherName":"Penguin Random House","AuthorNames":["J.K. Rowling"]},{"Id":10,"Title":"stringstri","Description":"string","IsRead":true,"DateRead":"2025-10-08T00:51:41","Rate":0,"Genre":"string","CoverUrl":"https://nads.1cdn.vn/2024/11/22/74da3f39-759b-4f08-8850-4c8f2937e81a-1_mangeshdes.png","DateAdded":"0001-01-01T00:00:00","PublisherName":"Penguin Random House","AuthorNames":["Agatha Christie"]},{"Id":11,"Title":"dewfewgfwergrg","Description":"h\u1ECFi l\u00E0m cc g\u00EC","IsRead":true,"DateRead":"2025-10-01T00:00:00","Rate":3,"Genre":"kinh d\u1ECB","CoverUrl":"xsacdscfedsvcfeds","DateAdded":"0001-01-01T00:00:00","PublisherName":"HarperCollins","AuthorNames":["Stephen King"]},{"Id":12,"Title":"fuyfcyiufuyf","Description":"h\u1ECFi l\u00E0m cc g\u00EC","IsRead":true,"DateRead":"2025-10-01T00:00:00","Rate":4,"Genre":"kinh d\u1ECB","CoverUrl":"https://i.pinimg.com/564x/72/f4/32/72f432c765e6df59daaf6aeff3ee4e9e.jpg","DateAdded":"0001-01-01T00:00:00","PublisherName":"Hachette Livre","AuthorNames":["George R.R. Martin"]}]
+2025-10-08 13:34:24.876 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WebAPI.Models.DTO.BookWithAuthorAndPublisherDTO, WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-08 13:34:24.878 +07:00 [INF] Executed action WebAPI.Controllers.BooksController.GetAll (WebAPI) in 12.731ms
+2025-10-08 13:34:24.879 +07:00 [INF] Executed endpoint 'WebAPI.Controllers.BooksController.GetAll (WebAPI)'
+2025-10-08 13:34:24.880 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7021/api/Books/get-all-books?filterOn=&filterQuery=&sortBy=&isAscending=True - 200 null application/json; charset=utf-8 18.8574ms

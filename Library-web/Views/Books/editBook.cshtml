@@ -1,0 +1,70 @@
+﻿@model Library_web.Models.DTO.editBookDTO
+@using Library_web.Models.DTO
+@{
+    var listAuthor = (IEnumerable<authorDTO>)ViewBag.ListAuthor;
+    var listPublisher = (IEnumerable<publisherDTO>)ViewBag.ListPublisher;
+}
+
+<h2>Edit Book</h2>
+
+<form asp-controller="Books" asp-action="editBook" asp-route-id="@Model.Id" method="POST">
+    <input type="hidden" asp-for="Id" />
+
+    <label>Title:</label>
+    <input asp-for="title" class="form-control" />
+    <span asp-validation-for="title" class="text-danger"></span>
+    <br />
+
+    <label>Description:</label>
+    <input asp-for="Description" class="form-control" />
+    <br />
+
+    <label>IsRead:</label><br />
+    <input type="radio" asp-for="IsRead" value="true" /> Yes
+    <input type="radio" asp-for="IsRead" value="false" /> No
+    <br />
+
+    <label>DateRead:</label>
+    <input asp-for="DateRead" type="datetime-local" class="form-control" />
+    <br />
+
+    <label>Rate:</label>
+    <input asp-for="Rate" type="number" class="form-control" />
+    <br />
+
+    <label>Genre:</label>
+    <input asp-for="Genre" class="form-control" />
+    <br />
+
+    <label>Cover Url:</label>
+    <input asp-for="CoverUrl" class="form-control" />
+    <br />
+
+    <label>DateAdded:</label>
+    <input asp-for="DateAdded" type="datetime-local" class="form-control" />
+    <br />
+
+    <label>Publisher:</label>
+    <select asp-for="PublisherID" class="form-control">
+        <option value="">-- chọn NXB --</option>
+        @foreach (var p in listPublisher)
+        {
+            <option value="@p.Id" selected="@(p.Id == Model.PublisherID)">
+                @p.Name
+            </option>
+        }
+    </select>
+    <br />
+
+    <label>Authors:</label>
+    <select asp-for="AuthorIds" multiple class="form-control">
+        @foreach (var a in listAuthor)
+        {
+            var selected = Model.AuthorIds != null && Model.AuthorIds.Contains(a.Id.ToString());
+            <option value="@a.Id" selected="@(selected)">@a.FullName</option>
+        }
+    </select>
+    <br />
+
+    <input type="submit" value="Save" class="btn btn-primary" />
+</form>

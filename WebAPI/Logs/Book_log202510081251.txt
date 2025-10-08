@@ -1,0 +1,7 @@
+2025-10-08 12:51:49.506 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7021/api/Author/add-Author - application/json 22
+2025-10-08 12:51:49.515 +07:00 [INF] Executing endpoint 'WebAPI.Controllers.AuthorController.AddAuthor (WebAPI)'
+2025-10-08 12:51:49.517 +07:00 [INF] Route matched with {action = "AddAuthor", controller = "Author"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddAuthor(WebAPI.Models.DTO.AddAuthorRequestDTO) on controller WebAPI.Controllers.AuthorController (WebAPI).
+2025-10-08 12:51:51.389 +07:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'.
+2025-10-08 12:51:51.395 +07:00 [INF] Executed action WebAPI.Controllers.AuthorController.AddAuthor (WebAPI) in 1876.3174ms
+2025-10-08 12:51:51.397 +07:00 [INF] Executed endpoint 'WebAPI.Controllers.AuthorController.AddAuthor (WebAPI)'
+2025-10-08 12:51:51.397 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7021/api/Author/add-Author - 400 null application/json; charset=utf-8 1892.0601ms
